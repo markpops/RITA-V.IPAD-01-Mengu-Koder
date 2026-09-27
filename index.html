@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="RITA" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="theme-color" content="#06111f" />
+<link rel="apple-touch-icon" href="data:image/png;base64,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" />
+<link rel="icon" type="image/png" href="data:image/png;base64,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" />
+<meta name="format-detection" content="telephone=no" />
+<title>RITA | Rhinoplasty Image Targeting Assistant</title>
+<style>
+:root{
+  --bg:#06111f;--panel:#0d1b2e;--panel2:#10223b;--line:#23405f;
+  --text:#edf5ff;--muted:#9ab0cd;--green:#2df28a;--cyan:#35d7ff;
+  --yellow:#ffd166;--red:#ff5570;--white:#fff;--shadow:0 14px 42px rgba(0,0,0,.36)
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;overscroll-behavior:none}
+body{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.app{min-height:100%;display:flex;flex-direction:column;background:radial-gradient(circle at top left,#102849 0,#07111f 46%,#040912 100%)}
+header{position:sticky;top:0;z-index:20;background:rgba(6,17,31,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 14px 10px;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}.mark{width:58px;height:58px;display:grid;place-items:center}.mark svg{width:58px;height:58px;filter:drop-shadow(0 0 14px rgba(45,242,138,.22))}.brand h1{margin:0;font-size:25px;letter-spacing:.08em;line-height:1}.brand small{display:block;color:#c7d7ed;font-size:11px;margin-top:4px}.pillset{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.pill{border:1px solid rgba(45,242,138,.38);color:var(--green);padding:7px 10px;border-radius:999px;font-size:12px;background:rgba(45,242,138,.08);white-space:nowrap}.pill.warn{border-color:rgba(255,209,102,.45);color:var(--yellow);background:rgba(255,209,102,.08)}.pill.red{border-color:rgba(255,85,112,.45);color:var(--red);background:rgba(255,85,112,.08)}
+.tabs{display:flex;gap:8px;overflow:auto;padding:0 12px 12px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:var(--muted);padding:10px 12px;border-radius:14px;font-weight:800;font-size:12px;white-space:nowrap}.tab.active{background:rgba(45,242,138,.12);border-color:rgba(45,242,138,.45);color:var(--green)}.tab.compare-tab.active{background:rgba(53,215,255,.14);border-color:rgba(53,215,255,.5);color:var(--cyan)}
+main{flex:1;padding:14px;max-width:1220px;width:100%;margin:0 auto;display:grid;gap:14px}.grid{display:grid;grid-template-columns:1fr;gap:14px}.card{background:linear-gradient(180deg,rgba(16,31,53,.96),rgba(10,22,38,.96));border:1px solid rgba(255,255,255,.08);border-radius:22px;box-shadow:var(--shadow);padding:14px}.card h2,.card h3{margin:0 0 12px}.card h2{font-size:18px}.card h3{font-size:15px;color:#cfe1ff}.hint{color:var(--muted);font-size:12px;line-height:1.45;margin:8px 0 0}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}.field label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}select,input,textarea{width:100%;background:#081527;color:var(--text);border:1px solid rgba(255,255,255,.12);border-radius:13px;padding:12px;font-size:15px;outline:none}select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible,.chip:focus-visible,.tab:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}input[type=range]{padding:0;border:0;background:transparent;accent-color:var(--green)}.btn{border:0;border-radius:15px;padding:12px 14px;font-weight:900;font-size:14px;color:#06101d;background:linear-gradient(135deg,var(--green),#7dffc0);box-shadow:0 8px 24px rgba(45,242,138,.22);cursor:pointer}.btn:disabled{opacity:.48;cursor:not-allowed;box-shadow:none;filter:saturate(.75)}.btn.secondary{background:rgba(255,255,255,.07);color:var(--text);border:1px solid rgba(255,255,255,.12);box-shadow:none}.btn.warn{background:linear-gradient(135deg,var(--yellow),#fff0a5)}.btn.red{background:linear-gradient(135deg,var(--red),#ff9cad);color:white}.btn.cyan{background:linear-gradient(135deg,var(--cyan),#a6f0ff);color:#06101d}.btnbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.stage{position:relative;width:100%;aspect-ratio:3/4;min-height:430px;overflow:hidden;border-radius:22px;background:#050a12;border:1px solid rgba(255,255,255,.1);touch-action:none}.stage video,.stage canvas,.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.stage video{z-index:1;background:#050a12}#refOverlayImg{z-index:1;pointer-events:none;display:none;opacity:.4}.stage canvas{z-index:2;touch-action:none}.placeholder{position:absolute;inset:0;z-index:0;display:grid;place-items:center;text-align:center;color:var(--muted);padding:24px;background:radial-gradient(circle at 50% 20%,rgba(53,215,255,.12),transparent 42%)}.badge{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.52);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 10px;font-size:12px;color:#dfeeff;z-index:4}.score{position:absolute;right:12px;top:12px;background:rgba(255,209,102,.12);border:1px solid rgba(255,209,102,.42);color:var(--yellow);border-radius:999px;padding:7px 10px;font-weight:900;font-size:12px;z-index:4}.score.ready{background:rgba(45,242,138,.14);border-color:rgba(45,242,138,.45);color:var(--green);animation:pulse 1.05s ease-in-out infinite}.score.lost{background:rgba(255,85,112,.14);border-color:rgba(255,85,112,.45);color:var(--red)}.command{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(0,0,0,.64);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:11px 12px;font-weight:900;color:#fff;z-index:4;text-align:center;letter-spacing:.02em}.command.ready{border-color:rgba(45,242,138,.55);color:var(--green)}.command.warn{border-color:rgba(255,209,102,.55);color:var(--yellow)}.command.capture-ready{cursor:pointer;box-shadow:0 0 0 2px rgba(45,242,138,.18),0 0 24px rgba(45,242,138,.22)}.command.capture-locked{cursor:not-allowed}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:6}.flash.on{animation:flashpop .32s ease-out}@keyframes flashpop{0%{opacity:.9}100%{opacity:0}}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:11px}.metric span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em}.metric b{font-size:18px;color:var(--text)}.list{display:grid;gap:9px}.item{display:flex;justify-content:space-between;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;color:#d9e8ff}.dot{width:10px;height:10px;border-radius:50%;background:var(--green);display:inline-block;margin-right:8px}.dot.yellow{background:var(--yellow)}.dot.red{background:var(--red)}.dot.cyan{background:var(--cyan)}.footer-note{padding:18px 14px;color:var(--muted);font-size:11px;text-align:center}.switch{display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;margin-bottom:10px}.switch input{width:auto}.photo-preview{display:none;width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.1);margin-top:12px}.meter{height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:7px}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--yellow),var(--green));border-radius:999px;transition:width .18s ease}
+
+.case-panel{border:1px solid rgba(53,215,255,.18);background:rgba(53,215,255,.06);border-radius:18px;padding:12px;margin:0}
+.case-path{font-size:12px;color:#cfe1ff;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:9px 10px;margin-top:8px;word-break:break-word}
+.case-status{font-size:12px;color:var(--yellow);margin-top:8px;min-height:16px;line-height:1.35}
+.case-log{display:grid;gap:8px;max-height:340px;overflow:auto;margin-top:10px;padding-right:3px}
+.case-entry{display:grid;grid-template-columns:56px 1fr;gap:9px;align-items:start;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:8px}
+.case-entry img{width:56px;height:74px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#050a12}
+.case-entry b{display:block;font-size:12px;color:#edf5ff;margin-bottom:3px}
+.case-entry span{display:block;font-size:11px;color:var(--muted);line-height:1.25}
+.case-entry-actions{display:flex;gap:6px;margin-top:7px;flex-wrap:wrap}
+.mini-btn{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:var(--muted);padding:6px 9px;border-radius:9px;font-size:10.5px;cursor:pointer;font-weight:800}
+.mini-btn.cyan{border-color:rgba(53,215,255,.4);color:var(--cyan);background:rgba(53,215,255,.08)}
+.mini-btn.red{border-color:rgba(255,85,112,.4);color:var(--red);background:rgba(255,85,112,.08)}
+hr.soft{border:0;border-top:1px solid rgba(255,255,255,.08);margin:14px 0}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:2px 0 14px}
+.chip{border:1px solid rgba(53,215,255,.35);background:rgba(53,215,255,.08);color:#cfe1ff;padding:7px 11px;border-radius:999px;font-size:11.5px;cursor:pointer;font-weight:700}
+.chip:active{transform:scale(.96)}
+.subhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.subhead h3{margin:0}
+.refbar{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end;margin-bottom:12px}
+.refbar .field{margin-bottom:0}
+.opacity-wrap{display:flex;flex-direction:column;gap:6px;min-width:120px}
+.opacity-wrap label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+
+.compare-hint{color:var(--muted);font-size:12px;line-height:1.45;margin:0 0 12px}
+.compare-pickers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.compare-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}
+.compare-stage{position:relative;width:100%;aspect-ratio:3/4;max-height:680px;margin:0 auto;border-radius:22px;overflow:hidden;background:#050a12;border:1px solid rgba(255,255,255,.1);touch-action:none;cursor:ew-resize}
+.compare-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+.compare-stage .imgA{z-index:1}
+.compare-stage .imgB{z-index:2;clip-path:inset(0 0 0 50%)}
+.compare-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;box-shadow:0 0 10px rgba(0,0,0,.6);z-index:3;pointer-events:none;display:none}
+.compare-handle::after{content:'\\2194';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);border:2px solid rgba(0,0,0,.2);display:grid;place-items:center;font-weight:900;color:#0a1830;font-size:15px}
+.compare-tag{position:absolute;top:12px;background:rgba(0,0,0,.58);border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800;color:#fff;z-index:4;letter-spacing:.04em}
+.compare-tag.left{left:12px}.compare-tag.right{right:12px}
+.compare-grid-overlay{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:0;transition:opacity .15s}
+.compare-grid-overlay.on{opacity:1}
+.empty-compare{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);padding:26px;z-index:5}
+
+@media(min-width:900px){main{padding:18px}.grid.desktop{grid-template-columns:1fr 340px}.stage{min-height:640px}.compare-stage{min-height:640px}.tabs{justify-content:center}.tab{font-size:13px;padding:11px 16px}}
+@media(max-width:540px){.topbar{align-items:flex-start}.pillset{display:none}.brand h1{font-size:22px}.brand small{font-size:10px;max-width:250px;line-height:1.25}.mark,.mark svg{width:50px;height:50px}.row{grid-template-columns:1fr}.btnbar{display:grid;grid-template-columns:1fr 1fr}.btn{width:100%}.stage{min-height:480px}.compare-stage{min-height:480px}.metrics{grid-template-columns:1fr 1fr}.compare-pickers{grid-template-columns:1fr}.refbar{grid-template-columns:1fr}}
+
+/* ===== iPad / touch optimisation ===== */
+html{touch-action:manipulation;-webkit-text-size-adjust:100%}
+button,.chip,.tab,.mini-btn,.command,label.switch{touch-action:manipulation;-webkit-user-select:none;user-select:none}
+select,input,textarea{font-size:16px}
+.btn{min-height:48px}
+.tab{min-height:44px}
+.chip{min-height:40px;padding:9px 14px;font-size:13px}
+.mini-btn{min-height:40px;padding:8px 13px;font-size:12px}
+.case-entry{grid-template-columns:64px 1fr}
+.case-entry img{width:64px;height:85px}
+.switch{min-height:52px}
+.switch input[type=checkbox]{width:26px;height:26px;flex:0 0 26px;accent-color:var(--green)}
+input[type=range]{height:36px}
+.brand small.expansion b{color:var(--green);font-weight:900}
+.brand small.credits{color:var(--cyan);font-size:11px;margin-top:3px;letter-spacing:.02em}
+.storage-info{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.35}
+.share-again{margin-top:8px}
+@media(min-width:700px) and (pointer:coarse), (min-width:700px) and (max-width:1366px){
+  .stage,.compare-stage{width:min(100%, calc((100dvh - 210px) * .75));min-height:0;margin-left:auto;margin-right:auto}
+}
+@media(min-width:700px) and (max-width:899px){
+  .grid.desktop{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="topbar">
+    <div class="brand">
+      <div class="mark" aria-label="RITA logo">
+        <svg viewBox="0 0 160 160" role="img" aria-label="RITA logo">
+          <rect x="2" y="2" width="156" height="156" rx="34" fill="#06111f" stroke="#23405f" stroke-width="2"/>
+          <path d="M46 134 V30 H82 C102 30 112 44 112 58 C112 72 102 84 82 84 H46 M74 84 L106 116 C111 122 107 130 99 129 L88 128" fill="none" stroke="#edf5ff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="106" cy="118" r="19" fill="none" stroke="#ffd166" stroke-width="3.5"/>
+          <line x1="106" y1="93" x2="106" y2="99" stroke="#ffd166" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="131" y1="118" x2="125" y2="118" stroke="#ffd166" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div><h1>RITA</h1><small class="expansion"><b>R</b>hinoplasty <b>I</b>mage <b>T</b>argeting <b>A</b>ssistant</small><small class="credits">Developers: Mengu &amp; Koder (2026)</small></div>
+    </div>
+    <div class="pillset">
+      <div class="pill red" id="cameraState" data-i18n="pillCameraInactive">Camera inactive</div>
+      <div class="pill warn" id="modelState" data-i18n="pillModelLoading">AI model loading</div>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" data-view="frontal" data-i18n="tabFrontal">Frontal</button>
+    <button class="tab" data-view="right" data-i18n="tabRight">Right Profile</button>
+    <button class="tab" data-view="left" data-i18n="tabLeft">Left Profile</button>
+    <button class="tab" data-view="basal" data-i18n="tabBasal">Basal View</button>
+    <button class="tab compare-tab" data-view="compare" data-i18n="tabCompare">Compare</button>
+  </div>
+</header>
+
+<main>
+  <section class="card case-panel">
+    <div class="subhead"><h2 style="margin:0" data-i18n="patientTitle">Patient Case</h2></div>
+    <div id="recentChips" class="chips" style="display:none"></div>
+    <div class="row">
+      <div class="field">
+        <label data-i18n="firstName">First name</label>
+        <input id="patientFirst" type="text" autocomplete="off" data-i18n-ph="placeholderFirst" placeholder="First name" />
+      </div>
+      <div class="field">
+        <label data-i18n="lastName">Last name</label>
+        <input id="patientLast" type="text" autocomplete="off" data-i18n-ph="placeholderLast" placeholder="Last name" />
+      </div>
+    </div>
+    <div class="field">
+      <label data-i18n="patientId">Patient ID / chart no. optional</label>
+      <input id="patientCode" type="text" autocomplete="off" data-i18n-ph="placeholderId" placeholder="Optional ID" />
+    </div>
+    <div class="row">
+      <div class="field">
+        <label data-i18n="age">Age</label>
+        <input id="patientAge" type="number" inputmode="numeric" min="0" max="120" data-i18n-ph="placeholderAge" placeholder="Age" />
+      </div>
+      <div class="field">
+        <label data-i18n="gender">Gender</label>
+        <select id="patientGender">
+          <option value="" selected data-i18n="genderSelect">Select</option>
+          <option value="female" data-i18n="genderFemale">Female</option>
+          <option value="male" data-i18n="genderMale">Male</option>
+          <option value="other" data-i18n="genderOther">Other</option>
+          <option value="not-specified" data-i18n="genderNS">Not specified</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label data-i18n="phase">Case phase</label>
+        <select id="phaseSelect">
+          <option value="preop" selected data-i18n="phasePre">Pre-op</option>
+          <option value="intraop" data-i18n="phaseIntra">Intraoperative</option>
+          <option value="postop" data-i18n="phasePost">Post-op</option>
+        </select>
+      </div>
+      <div class="field">
+        <label data-i18n="photoType">Photo type</label>
+        <select id="photoVariantSelect">
+          <option value="original-capture" selected data-i18n="variantOriginal">Original capture</option>
+          <option value="edited-target" data-i18n="variantTarget">Edited target / DST</option>
+          <option value="alignment-overlay" data-i18n="variantOverlay">Alignment overlay</option>
+        </select>
+      </div>
+    </div>
+    <label class="switch"><span data-i18n="autoSave">Auto-save captured photo to case</span><input id="autoSaveToggle" type="checkbox" checked /></label>
+    <div class="btnbar">
+      <button id="saveCaseBtn" class="btn secondary" data-i18n="saveCase">Save to Patient Case</button>
+      <button id="exportCaseBtn" class="btn warn" data-i18n="exportCase">Export Patient Folder</button>
+      <button id="clearCaseBtn" class="btn red" data-i18n="clearCase">Clear Case</button>
+    </div>
+    <div class="case-path" id="casePath">Case folder: enter patient name</div>
+    <div class="case-status" id="caseStatus"></div>
+    <hr class="soft" />
+    <h3 data-i18n="savedPhotos">Saved photos</h3>
+    <div class="case-log" id="caseLog"></div>
+    <div class="storage-info" id="storageInfo"></div>
+  </section>
+
+  <div class="grid desktop" id="captureLayout">
+    <section class="card">
+      <h2 data-i18n="stageTitle">Live Alignment</h2>
+      <div class="refbar">
+        <div class="field">
+          <label data-i18n="ghostRef">Ghost reference (compare live view to a saved photo)</label>
+          <select id="refOverlaySelect"><option value="" data-i18n="ghostRefNone">No reference</option></select>
+        </div>
+        <div class="opacity-wrap">
+          <label data-i18n="ghostOpacity">Opacity</label>
+          <input id="refOverlayOpacity" type="range" min="10" max="70" value="40" />
+        </div>
+      </div>
+      <label class="switch"><span data-i18n="ghostRefToggle">Show reference overlay on live camera</span><input id="refOverlayToggle" type="checkbox" /></label>
+      <div class="stage" id="stage">
+        <div class="placeholder" data-i18n="placeholderStage">Start the camera. RITA will search for the face and nose, then guide the nasal tip into the yellow target.</div>
+        <video id="video" autoplay playsinline muted></video>
+        <img id="refOverlayImg" alt="" />
+        <canvas id="overlay"></canvas>
+        <div class="flash" id="flashEl"></div>
+        <div class="badge" id="modeBadge" data-i18n="badgeDefault">AI nose tracking</div>
+        <div class="score lost" id="readyScore" data-i18n="scoreNoCamera">NO CAMERA</div>
+        <div class="command warn capture-locked" id="commandBox" role="button" tabindex="0" aria-disabled="true">START CAMERA</div>
+      </div>
+      <div class="btnbar">
+        <button id="captureBtn" class="btn warn" disabled data-i18n="captureBtnLocked">ALIGN FIRST</button>
+        <button id="downloadBtn" class="btn secondary" data-i18n="downloadBtn">Save / Share Last Photo</button>
+      </div>
+      <img id="preview" class="photo-preview" alt="Captured preview" />
+    </section>
+
+    <section class="card">
+      <h3 data-i18n="settingsTitle">Camera &amp; Recognition</h3>
+      <div class="field">
+        <label data-i18n="camera">Camera</label>
+        <select id="cameraSelect"><option value="environment" data-i18n="camBack">Back camera preferred</option><option value="user" data-i18n="camFront">Front camera</option></select>
+        <div class="hint" id="cameraHint">Camera starts after permission. If the preferred camera fails, RITA will try a generic camera fallback.</div>
+      </div>
+      <div class="field" style="display:none">
+        <label data-i18n="interfaceLang">Interface language</label>
+        <select id="languageSelect"><option value="en" selected>English</option><option value="tr">Türkçe</option></select>
+      </div>
+      <div class="field">
+        <label data-i18n="distance">Target face size / distance</label>
+        <input id="distance" type="range" min="42" max="82" value="58" />
+        <div class="hint" data-i18n="distanceHint">Lower values accept a more distant clinical framing. Increase only for close nasal detail.</div>
+      </div>
+      <div class="field">
+        <label data-i18n="templateSize">Nose template height</label>
+        <input id="templateSize" type="range" min="48" max="82" value="62" />
+      </div>
+      <label class="switch"><span data-i18n="aiToggleLbl">AI face + nose recognition</span><input id="aiToggle" type="checkbox" checked /></label>
+      <label class="switch"><span data-i18n="beepToggleLbl">Beep-only alignment guidance</span><input id="beepToggle" type="checkbox" checked /></label>
+      <label class="switch"><span data-i18n="shutterToggleLbl">Camera shutter sound after capture</span><input id="shutterToggle" type="checkbox" checked /></label>
+      <label class="switch"><span data-i18n="landmarkToggleLbl">Show landmark vectors</span><input id="landmarkToggle" type="checkbox" checked /></label>
+      <div class="btnbar">
+        <button id="startBtn" class="btn" data-i18n="startBtn">Start Camera</button>
+        <button id="switchBtn" class="btn secondary" data-i18n="switchBtn">Switch</button>
+        <button id="refreshCamerasBtn" class="btn secondary" data-i18n="refreshBtn">Refresh Cameras</button>
+        <button id="resetBtn" class="btn secondary" data-i18n="resetBtn">Reset</button>
+      </div>
+      <p class="hint" data-i18n="safetyHint">The app uses visual commands plus beep-only alignment feedback. Capture remains locked until face size, angle, yaw, stability, and nasal-tip alignment are correct. A camera shutter sound plays after each capture when enabled. No spoken voice commands are used.</p>
+      <hr class="soft" />
+      <h3 data-i18n="recogTitle">Recognition Status</h3>
+      <div class="metrics">
+        <div class="metric"><span data-i18n="mDetect">Face/Nose</span><b id="mDetect">--</b></div>
+        <div class="metric"><span data-i18n="mNose">Nose X / Y</span><b id="mNose">--</b></div>
+        <div class="metric"><span data-i18n="mRoll">Roll angle</span><b id="mRoll">--</b></div>
+        <div class="metric"><span data-i18n="mSize">Size</span><b id="mSize">--</b></div>
+        <div class="metric"><span data-i18n="mYaw">Yaw / Turn</span><b id="mYaw">--</b></div>
+        <div class="metric"><span data-i18n="mStable">Stability</span><b id="mStable">--</b><div class="meter"><i id="stableBar"></i></div></div>
+      </div>
+      <h3 style="margin-top:16px" data-i18n="landmarksTitle">Tracked landmarks</h3>
+      <div class="list">
+        <div class="item"><span><i class="dot yellow"></i><span data-i18n="lmTip">Nasal tip target</span></span><b>Yellow</b></div>
+        <div class="item"><span><i class="dot cyan"></i><span data-i18n="lmBridge">Bridge + midline vector</span></span><b>Cyan</b></div>
+        <div class="item"><span><i class="dot"></i><span data-i18n="lmAlar">Alar / nostril line</span></span><b>Green</b></div>
+        <div class="item"><span><i class="dot red"></i><span data-i18n="lmMove">Move direction</span></span><b>Arrows</b></div>
+      </div>
+      <p class="hint" data-i18n="disclaimer">This browser prototype provides alignment assistance only. It is not a validated surgical landmark-recognition or clinical decision system.</p>
+    </section>
+  </div>
+
+  <section class="card" id="compareCard" style="display:none">
+    <h2 data-i18n="compareTitle">Assessment Comparison</h2>
+    <p class="compare-hint" data-i18n="compareHint">Pick a target/plan photo and a result photo for this patient, then drag across the image to reveal the difference.</p>
+    <div class="compare-pickers">
+      <div class="field">
+        <label data-i18n="compareTargetLabel">Target / plan</label>
+        <select id="compareTargetSelect"></select>
+      </div>
+      <div class="field">
+        <label data-i18n="compareResultLabel">Result / current</label>
+        <select id="compareResultSelect"></select>
+      </div>
+    </div>
+    <div class="compare-stage" id="compareStage">
+      <img class="imgA" id="compareImgA" alt="" />
+      <img class="imgB" id="compareImgB" alt="" />
+      <svg class="compare-grid-overlay" id="compareGridOverlay" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(53,215,255,.55)" stroke-width="0.4" stroke-dasharray="2,2"/>
+        <line x1="0" y1="33.3" x2="100" y2="33.3" stroke="rgba(53,215,255,.4)" stroke-width="0.3" stroke-dasharray="2,2"/>
+        <line x1="0" y1="66.6" x2="100" y2="66.6" stroke="rgba(53,215,255,.4)" stroke-width="0.3" stroke-dasharray="2,2"/>
+      </svg>
+      <div class="compare-handle" id="compareHandle"></div>
+      <div class="compare-tag left" id="compareTagLeft">TARGET</div>
+      <div class="compare-tag right" id="compareTagRight">RESULT</div>
+      <div class="empty-compare" id="compareEmpty" data-i18n="compareEmptyText">Save at least two photos for this patient (for example a pre-op target and a post-op result) to compare them here.</div>
+    </div>
+    <div class="compare-toolbar">
+      <label class="switch" style="margin:0;flex:1;min-width:220px"><span data-i18n="compareGrid">Show symmetry grid</span><input id="compareGridToggle" type="checkbox" /></label>
+      <button id="useAsReferenceBtn" class="btn cyan" data-i18n="compareUseRef">Use target as live reference</button>
+    </div>
+  </section>
+</main>
+<div class="footer-note" data-i18n="footer">RITA prototype | AI-assisted visual alignment + beep-only guidance | not for independent clinical decision-making</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+<script>
+const IS_IPAD = /iPad/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+try{ if(navigator.audioSession) navigator.audioSession.type = 'playback'; }catch(e){}
+const video = document.getElementById('video');
+const canvas = document.getElementById('overlay');
+const ctx = canvas.getContext('2d');
+const stage = document.getElementById('stage');
+const startBtn = document.getElementById('startBtn');
+const switchBtn = document.getElementById('switchBtn');
+const refreshCamerasBtn = document.getElementById('refreshCamerasBtn');
+const captureBtn = document.getElementById('captureBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const resetBtn = document.getElementById('resetBtn');
+const cameraSelect = document.getElementById('cameraSelect');
+const cameraState = document.getElementById('cameraState');
+const modelState = document.getElementById('modelState');
+const commandBox = document.getElementById('commandBox');
+const readyScore = document.getElementById('readyScore');
+const modeBadge = document.getElementById('modeBadge');
+const distanceSlider = document.getElementById('distance');
+const templateSizeSlider = document.getElementById('templateSize');
+const beepToggle = document.getElementById('beepToggle');
+const shutterToggle = document.getElementById('shutterToggle');
+const aiToggle = document.getElementById('aiToggle');
+const landmarkToggle = document.getElementById('landmarkToggle');
+const languageSelect = document.getElementById('languageSelect');
+const preview = document.getElementById('preview');
+const flashEl = document.getElementById('flashEl');
+const mDetect = document.getElementById('mDetect'), mNose = document.getElementById('mNose'), mRoll = document.getElementById('mRoll'), mSize = document.getElementById('mSize'), mYaw = document.getElementById('mYaw'), mStable = document.getElementById('mStable'), stableBar = document.getElementById('stableBar');
+
+const patientFirst = document.getElementById('patientFirst');
+const patientLast = document.getElementById('patientLast');
+const patientCode = document.getElementById('patientCode');
+const patientAge = document.getElementById('patientAge');
+const patientGender = document.getElementById('patientGender');
+const cameraHint = document.getElementById('cameraHint');
+const phaseSelect = document.getElementById('phaseSelect');
+const photoVariantSelect = document.getElementById('photoVariantSelect');
+const autoSaveToggle = document.getElementById('autoSaveToggle');
+const saveCaseBtn = document.getElementById('saveCaseBtn');
+const exportCaseBtn = document.getElementById('exportCaseBtn');
+const clearCaseBtn = document.getElementById('clearCaseBtn');
+const casePath = document.getElementById('casePath');
+const caseStatus = document.getElementById('caseStatus');
+const caseLog = document.getElementById('caseLog');
+const recentChips = document.getElementById('recentChips');
+
+const refOverlaySelect = document.getElementById('refOverlaySelect');
+const refOverlayToggle = document.getElementById('refOverlayToggle');
+const refOverlayOpacity = document.getElementById('refOverlayOpacity');
+const refOverlayImg = document.getElementById('refOverlayImg');
+
+const captureLayout = document.getElementById('captureLayout');
+const compareCard = document.getElementById('compareCard');
+const compareTargetSelect = document.getElementById('compareTargetSelect');
+const compareResultSelect = document.getElementById('compareResultSelect');
+const compareStage = document.getElementById('compareStage');
+const compareImgA = document.getElementById('compareImgA');
+const compareImgB = document.getElementById('compareImgB');
+const compareHandle = document.getElementById('compareHandle');
+const compareGridToggle = document.getElementById('compareGridToggle');
+const compareGridOverlay = document.getElementById('compareGridOverlay');
+const compareEmpty = document.getElementById('compareEmpty');
+const compareTagLeft = document.getElementById('compareTagLeft');
+const compareTagRight = document.getElementById('compareTagRight');
+const useAsReferenceBtn = document.getElementById('useAsReferenceBtn');
+
+let stream = null, view = 'frontal', facing = 'environment', lastPhoto = null, lastOriginalPhoto = null, audioCtx = null;
+let faceMesh = null, modelReady = false, modelFailed = false, processing = false;
+let lastLandmarks = null, lastLandmarkAt = 0, lastProcessAt = 0;
+let lastBeepAt = 0, lastReadyBeepAt = 0, lastShutterAt = 0;
+let stableSince = 0, lastCommandKey = 'startCamera';
+let alignmentReady = false;
+let currentLang = 'en';
+let currentMode = 'capture';
+let compareDragging = false;
+
+const SAY = {
+  en: {
+    startCamera:'START CAMERA', loading:'AI NOSE MODEL LOADING', noFace:'CENTER THE FACE AND NOSE',
+    closer:'MOVE CLOSER', farther:'MOVE BACK', left:'SHIFT LEFT', right:'SHIFT RIGHT', up:'MOVE UP', down:'MOVE DOWN',
+    levelLeft:'LEVEL CAMERA LEFT', levelRight:'LEVEL CAMERA RIGHT', turnLeft:'TURN FACE SLIGHTLY LEFT', turnRight:'TURN FACE SLIGHTLY RIGHT',
+    hold:'HOLD STILL', ready:'PERFECT POSITION - TAKE PHOTO', manual:'AI MODEL OFF - TEMPLATE MODE', align:'ALIGN NASAL TIP WITH YELLOW TARGET', captured:'PHOTO CAPTURED'
+  },
+  tr: {
+    startCamera:'KAMERAYI BAŞLAT', loading:'YAPAY ZEKA MODELİ YÜKLENİYOR', noFace:'YÜZÜ VE BURUNU ORTALAYIN',
+    closer:'YAKLAŞIN', farther:'GERİ ÇEKİLİN', left:'SOLA KAYDIRIN', right:'SAĞA KAYDIRIN', up:'YUKARI ÇIKARIN', down:'AŞAĞI İNDİRİN',
+    levelLeft:'KAMERAYI SOLA DÜZELTİN', levelRight:'KAMERAYI SAĞA DÜZELTİN', turnLeft:'YÜZÜ HAFİF SOLA ÇEVİRİN', turnRight:'YÜZÜ HAFİF SAĞA ÇEVİRİN',
+    hold:'SABİT DURUN', ready:'MÜKEMMEL KONUM - FOTOĞRAF ÇEKİN', manual:'AI KAPALI - ŞABLON MODU', align:'BURUN UCUNU SARI HEDEFE HİZALAYIN', captured:'FOTOĞRAF ÇEKİLDİ'
+  }
+};
+function L(key){ return (SAY[currentLang] && SAY[currentLang][key]) || SAY.en[key] || key; }
+
+const T = {
+  en: {
+    brandSub1:'Rhinoplasty Image Targeting Assistant',
+    pillCameraInactive:'Camera inactive', pillModelLoading:'AI model loading',
+    tabFrontal:'Frontal', tabRight:'Right Profile', tabLeft:'Left Profile', tabBasal:'Basal View', tabCompare:'Compare',
+    patientTitle:'Patient Case', firstName:'First name', lastName:'Last name', patientId:'Patient ID / chart no. optional',
+    placeholderFirst:'First name', placeholderLast:'Last name', placeholderId:'Optional ID', placeholderAge:'Age',
+    age:'Age', gender:'Gender', genderSelect:'Select', genderFemale:'Female', genderMale:'Male', genderOther:'Other', genderNS:'Not specified',
+    phase:'Case phase', phasePre:'Pre-op', phaseIntra:'Intraoperative', phasePost:'Post-op',
+    photoType:'Photo type', variantOriginal:'Original capture', variantTarget:'Edited target / DST', variantOverlay:'Alignment overlay',
+    autoSave:'Auto-save captured photo to case',
+    saveCase:'Save to Patient Case', exportCase:'Export Patient Folder', clearCase:'Clear Case',
+    caseFolderPrefix:'Case folder:',
+    savedPhotos:'Saved photos', noCaseYet:'Enter patient name to create a case folder.', noPhotosYet:'No photos saved in this patient case yet.',
+    actionReference:'\uD83D\uDC7B Use as reference', actionDelete:'\uD83D\uDDD1 Delete',
+    confirmDeletePhoto:'Delete this saved photo? This cannot be undone.', confirmClearCase:'Clear ALL saved photos for this patient? This cannot be undone.',
+    stageTitle:'Live Alignment', ghostRef:'Ghost reference (compare live view to a saved photo)', ghostRefNone:'No reference', ghostRefToggle:'Show reference overlay on live camera', ghostOpacity:'Opacity',
+    placeholderStage:'Start the camera. RITA will search for the face and nose, then guide the nasal tip into the yellow target.',
+    captureBtnLocked:'ALIGN FIRST', downloadBtn:'Save / Share Last Photo',
+    settingsTitle:'Camera & Recognition', camera:'Camera', camBack:'Back camera preferred', camFront:'Front camera', interfaceLang:'Interface language',
+    distance:'Target face size / distance', distanceHint:'Lower values accept a more distant clinical framing. Increase only for close nasal detail.',
+    templateSize:'Nose template height',
+    aiToggleLbl:'AI face + nose recognition', beepToggleLbl:'Beep-only alignment guidance', shutterToggleLbl:'Camera shutter sound after capture', landmarkToggleLbl:'Show landmark vectors',
+    startBtn:'Start Camera', switchBtn:'Switch', refreshBtn:'Refresh Cameras', resetBtn:'Reset',
+    safetyHint:'The app uses visual commands plus beep-only alignment feedback. Capture remains locked until face size, angle, yaw, stability, and nasal-tip alignment are correct. A camera shutter sound plays after each capture when enabled. No spoken voice commands are used.',
+    recogTitle:'Recognition Status', mDetect:'Face/Nose', mNose:'Nose X / Y', mRoll:'Roll angle', mSize:'Size', mYaw:'Yaw / Turn', mStable:'Stability',
+    landmarksTitle:'Tracked landmarks', lmTip:'Nasal tip target', lmBridge:'Bridge + midline vector', lmAlar:'Alar / nostril line', lmMove:'Move direction',
+    disclaimer:'This browser prototype provides alignment assistance only. It is not a validated surgical landmark-recognition or clinical decision system.',
+    compareTitle:'Assessment Comparison', compareHint:'Pick a target/plan photo and a result photo for this patient, then drag across the image to reveal the difference.',
+    compareTargetLabel:'Target / plan', compareResultLabel:'Result / current', compareTagTarget:'TARGET', compareTagResult:'RESULT',
+    compareGrid:'Show symmetry grid', compareUseRef:'Use target as live reference',
+    compareEmptyText:'Save at least two photos for this patient (for example a pre-op target and a post-op result) to compare them here.',
+    footer:'RITA prototype | AI-assisted visual alignment + beep-only guidance | not for independent clinical decision-making',
+    titleReady:'All alignment conditions are verified. Tap to capture.', titleLocked:'Capture is locked until face size, angle, yaw, stability, and nasal-tip alignment are correct.',
+    commandTitleReady:'Tap to capture the photo.', commandTitleLocked:'Keep aligning until the position becomes ready.',
+    badgeDefault:'AI nose tracking', badgeSearching:'Searching for face + nose', badgeTracking:'AI face + nose tracking', badgeTemplate:'Template fallback mode',
+    scoreReady:'READY', scoreAligning:'ALIGNING', scoreNoCamera:'NO CAMERA', scoreLoading:'LOADING', scoreTemplate:'TEMPLATE', scoreNoFace:'NO FACE',
+    arrowCenter:'CENTER', arrowLeft:'LEFT', arrowRight:'RIGHT', arrowUp:'UP', arrowDown:'DOWN', tipTargetLabel:'TIP TARGET',
+    statusEnterNameSave:'Enter patient first and last name before saving.', statusEnterNameClear:'Enter patient first and last name before clearing a case.',
+    statusEnterNameExport:'Enter patient first and last name before exporting.', statusCaptureFirst:'Capture a photo before saving.',
+    statusSaveFailed:'Could not save locally. Use Download Last Photo as a fallback.',
+    statusZipUnavailable:'ZIP export library is unavailable. Connect to the internet or use Download Last Photo.',
+    statusNoSavedPhotos:'No saved photos found for this patient case.', statusExportFailed:'Export failed. Please try again or download the last photo manually.',
+    statusCaseCleared:'Patient case cleared from this browser.', statusLocalUnavailable:'Local case library is not available in this browser.',
+    unnamedPatient:'Unnamed_Patient'
+  },
+  tr: {
+    brandSub1:'Rinoplasti Ameliyat İçi Hedef Değerlendirmesi',
+    pillCameraInactive:'Kamera kapalı', pillModelLoading:'Yapay zeka modeli yükleniyor',
+    tabFrontal:'Ön Görünüm', tabRight:'Sağ Profil', tabLeft:'Sol Profil', tabBasal:'Bazal Görünüm', tabCompare:'Karşılaştır',
+    patientTitle:'Hasta Dosyası', firstName:'Ad', lastName:'Soyad', patientId:'Hasta no / dosya no (opsiyonel)',
+    placeholderFirst:'Ad', placeholderLast:'Soyad', placeholderId:'Opsiyonel no', placeholderAge:'Yaş',
+    age:'Yaş', gender:'Cinsiyet', genderSelect:'Seçiniz', genderFemale:'Kadın', genderMale:'Erkek', genderOther:'Diğer', genderNS:'Belirtilmedi',
+    phase:'Ameliyat aşaması', phasePre:'Ameliyat öncesi', phaseIntra:'Ameliyat sırasında', phasePost:'Ameliyat sonrası',
+    photoType:'Fotoğraf türü', variantOriginal:'Orijinal çekim', variantTarget:'Düzenlenmiş hedef / DST', variantOverlay:'Hizalama katmanı',
+    autoSave:'Çekilen fotoğrafı otomatik olarak dosyaya kaydet',
+    saveCase:'Hasta Dosyasına Kaydet', exportCase:'Hasta Klasörünü Dışa Aktar', clearCase:'Dosyayı Temizle',
+    caseFolderPrefix:'Dosya klasörü:',
+    savedPhotos:'Kayıtlı fotoğraflar', noCaseYet:'Dosya klasörü oluşturmak için hasta adını girin.', noPhotosYet:'Bu hasta dosyasında henüz fotoğraf yok.',
+    actionReference:'\uD83D\uDC7B Referans yap', actionDelete:'\uD83D\uDDD1 Sil',
+    confirmDeletePhoto:'Bu kayıtlı fotoğraf silinsin mi? Bu işlem geri alınamaz.', confirmClearCase:'Bu hastaya ait TÜM kayıtlı fotoğraflar silinsin mi? Bu işlem geri alınamaz.',
+    stageTitle:'Canlı Hizalama', ghostRef:'Hayalet referans (canlı görüntüyü kayıtlı bir fotoğrafla karşılaştırın)', ghostRefNone:'Referans yok', ghostRefToggle:'Referans katmanını canlı kamerada göster', ghostOpacity:'Saydamlık',
+    placeholderStage:'Kamerayı başlatın. RITA yüzü ve burnu arayacak, ardından burun ucunu sarı hedefe yönlendirecektir.',
+    captureBtnLocked:'ÖNCE HİZALAYIN', downloadBtn:'Son Fotoğrafı Kaydet / Paylaş',
+    settingsTitle:'Kamera ve Tanıma', camera:'Kamera', camBack:'Arka kamera tercih edilsin', camFront:'Ön kamera', interfaceLang:'Arayüz dili',
+    distance:'Hedef yüz boyutu / mesafe', distanceHint:'Düşük değerler daha uzak klinik çerçevelemeyi kabul eder. Yalnızca yakın burun detayı için artırın.',
+    templateSize:'Burun şablonu yüksekliği',
+    aiToggleLbl:'Yapay zeka yüz + burun tanıma', beepToggleLbl:'Yalnızca bip sesiyle hizalama rehberliği', shutterToggleLbl:'Çekimden sonra deklanşör sesi', landmarkToggleLbl:'Referans noktası vektörlerini göster',
+    startBtn:'Kamerayı Başlat', switchBtn:'Değiştir', refreshBtn:'Kameraları Yenile', resetBtn:'Sıfırla',
+    safetyHint:'Uygulama görsel komutlar ve yalnızca bip sesiyle hizalama geri bildirimi kullanır. Yüz boyutu, açı, dönüş, sabitlik ve burun ucu hizalaması doğru olana kadar çekim kilitli kalır. Etkinleştirildiğinde her çekimden sonra deklanşör sesi çalar. Sesli komut kullanılmaz.',
+    recogTitle:'Tanıma Durumu', mDetect:'Yüz/Burun', mNose:'Burun X / Y', mRoll:'Yatış açısı', mSize:'Boyut', mYaw:'Dönüş', mStable:'Sabitlik',
+    landmarksTitle:'Takip edilen noktalar', lmTip:'Burun ucu hedefi', lmBridge:'Sırt + orta hat vektörü', lmAlar:'Alar / burun kanadı çizgisi', lmMove:'Hareket yönü',
+    disclaimer:'Bu tarayıcı prototipi yalnızca hizalama desteği sağlar. Doğrulanmış bir cerrahi referans noktası tanıma veya klinik karar sistemi değildir.',
+    compareTitle:'Değerlendirme Karşılaştırması', compareHint:'Bu hasta için bir hedef/plan fotoğrafı ve bir sonuç fotoğrafı seçin, ardından farkı görmek için görüntü üzerinde sürükleyin.',
+    compareTargetLabel:'Hedef / plan', compareResultLabel:'Sonuç / güncel', compareTagTarget:'HEDEF', compareTagResult:'SONUÇ',
+    compareGrid:'Simetri ızgarasını göster', compareUseRef:'Hedefi canlı referans olarak kullan',
+    compareEmptyText:'Karşılaştırma yapabilmek için bu hastaya ait en az iki fotoğraf kaydedin (örneğin bir ameliyat öncesi hedef ve bir ameliyat sonrası sonuç).',
+    footer:'RITA prototipi | Yapay zeka destekli görsel hizalama + yalnızca bip sesiyle rehberlik | bağımsız klinik karar verme için değildir',
+    titleReady:'Tüm hizalama koşulları sağlandı. Çekmek için dokunun.', titleLocked:'Yüz boyutu, açı, dönüş, sabitlik ve burun ucu hizalaması doğru olana kadar çekim kilitlidir.',
+    commandTitleReady:'Fotoğrafı çekmek için dokunun.', commandTitleLocked:'Konum hazır olana kadar hizalamaya devam edin.',
+    badgeDefault:'Yapay zeka burun takibi', badgeSearching:'Yüz ve burun aranıyor', badgeTracking:'Yapay zeka yüz + burun takibi', badgeTemplate:'Şablon yedek modu',
+    scoreReady:'HAZIR', scoreAligning:'HİZALANIYOR', scoreNoCamera:'KAMERA YOK', scoreLoading:'YÜKLENİYOR', scoreTemplate:'ŞABLON', scoreNoFace:'YÜZ YOK',
+    arrowCenter:'ORTALA', arrowLeft:'SOL', arrowRight:'SAĞ', arrowUp:'YUKARI', arrowDown:'AŞAĞI', tipTargetLabel:'UÇ HEDEFİ',
+    statusEnterNameSave:'Kaydetmeden önce hastanın adını ve soyadını girin.', statusEnterNameClear:'Dosyayı temizlemeden önce hastanın adını ve soyadını girin.',
+    statusEnterNameExport:'Dışa aktarmadan önce hastanın adını ve soyadını girin.', statusCaptureFirst:'Kaydetmeden önce bir fotoğraf çekin.',
+    statusSaveFailed:'Yerel olarak kaydedilemedi. Alternatif olarak Son Fotoğrafı İndir seçeneğini kullanın.',
+    statusZipUnavailable:'ZIP dışa aktarma kütüphanesi kullanılamıyor. İnternete bağlanın veya Son Fotoğrafı İndir seçeneğini kullanın.',
+    statusNoSavedPhotos:'Bu hasta dosyasında kayıtlı fotoğraf bulunamadı.', statusExportFailed:'Dışa aktarma başarısız oldu. Lütfen tekrar deneyin veya son fotoğrafı elle indirin.',
+    statusCaseCleared:'Hasta dosyası bu tarayıcıdan temizlendi.', statusLocalUnavailable:'Bu tarayıcıda yerel dosya kütüphanesi kullanılamıyor.',
+    unnamedPatient:'Isimsiz_Hasta'
+  }
+};
+function dict(){ return T[currentLang] || T.en; }
+function msgSaved(path){ return currentLang==='tr' ? ('Şuraya kaydedildi: '+path) : ('Saved to '+path); }
+function msgExported(n){ return currentLang==='tr' ? (n+" fotoğraf hasta klasörü ZIP'i olarak dışa aktarıldı.") : ('Exported '+n+' photo(s) as a patient folder ZIP.'); }
+
+function applyLanguage(lang){
+  currentLang = (lang === 'tr') ? 'tr' : 'en';
+  const d = dict();
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(d[k] != null) el.textContent = d[k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const k = el.getAttribute('data-i18n-ph');
+    if(d[k] != null) el.placeholder = d[k];
+  });
+  commandBox.textContent = L(lastCommandKey);
+  setCaptureReady(alignmentReady);
+  updateCasePath();
+  renderCaseLog();
+  refreshRecentPatients();
+  if(currentMode === 'compare') renderCompareStage();
+}
+languageSelect.addEventListener('change', ()=>applyLanguage(languageSelect.value));
+
+function setPill(el, text, state){
+  el.textContent = text; el.classList.remove('warn','red');
+  if(state === 'warn') el.classList.add('warn');
+  if(state === 'red') el.classList.add('red');
+}
+function fitCanvas(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  const needW = Math.round(r.width*dpr), needH = Math.round(r.height*dpr);
+  if(canvas.width !== needW || canvas.height !== needH){
+    canvas.width = needW; canvas.height = needH;
+  }
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+window.addEventListener('resize', fitCanvas); fitCanvas();
+
+function beep(freq=660, duration=80, gain=0.04, minGap=320){
+  if(!beepToggle.checked) return;
+  const now = performance.now(); if(now - lastBeepAt < minGap) return; lastBeepAt = now;
+  try{
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator(); const g = audioCtx.createGain();
+    osc.type = 'sine'; osc.frequency.value = freq; g.gain.value = gain;
+    osc.connect(g); g.connect(audioCtx.destination); osc.start();
+    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration/1000);
+    osc.stop(audioCtx.currentTime + duration/1000 + 0.02);
+  }catch(e){}
+}
+function readyBeep(){
+  const now = performance.now();
+  if(now - lastReadyBeepAt < 2400) return;
+  lastReadyBeepAt = now;
+  beep(840,90,.055,0);
+  setTimeout(()=>beep(1080,120,.055,0),130);
+}
+function cameraShutterSound(){
+  if(shutterToggle && !shutterToggle.checked) return;
+  const nowMs = performance.now();
+  if(nowMs - lastShutterAt < 260) return;
+  lastShutterAt = nowMs;
+  try{
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+    const t = audioCtx.currentTime;
+    const makeClick = (delay, freq, dur, gainValue) => {
+      const osc = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(freq, t + delay);
+      g.gain.setValueAtTime(gainValue, t + delay);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + delay + dur);
+      osc.connect(g); g.connect(audioCtx.destination);
+      osc.start(t + delay);
+      osc.stop(t + delay + dur + 0.015);
+    };
+    makeClick(0.000, 1550, 0.028, 0.075);
+    makeClick(0.045, 720, 0.045, 0.055);
+    if(audioCtx.createBufferSource){
+      const dur = 0.055;
+      const buffer = audioCtx.createBuffer(1, Math.floor(audioCtx.sampleRate * dur), audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for(let i=0;i<data.length;i++){
+        data[i] = (Math.random()*2-1) * Math.pow(1 - i/data.length, 2.2);
+      }
+      const src = audioCtx.createBufferSource();
+      const g = audioCtx.createGain();
+      g.gain.setValueAtTime(0.035, t + 0.010);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.010 + dur);
+      src.buffer = buffer; src.connect(g); g.connect(audioCtx.destination);
+      src.start(t + 0.010); src.stop(t + 0.010 + dur);
+    }
+  }catch(e){}
+}
+function capturedBeep(){
+  if(shutterToggle && shutterToggle.checked){ cameraShutterSound(); return; }
+  if(!beepToggle.checked) return;
+  beep(900,70,.05,0);
+  setTimeout(()=>beep(1150,80,.05,0),110);
+  setTimeout(()=>beep(1350,90,.05,0),230);
+}
+function alignmentBeep(key, ready=false){
+  if(key === 'captured'){ capturedBeep(); return; }
+  if(!beepToggle.checked) return;
+  if(ready || key === 'ready'){ readyBeep(); return; }
+  if(key === 'hold') beep(760,42,.020,720);
+  else if(key === 'noFace') beep(330,75,.032,1500);
+  else if(key === 'loading') beep(410,55,.022,1400);
+  else if(key === 'startCamera' || key === 'manual') beep(300,70,.024,1600);
+  else if(key === 'closer' || key === 'farther') beep(450,65,.027,760);
+  else if(['left','right','up','down','levelLeft','levelRight','turnLeft','turnRight'].includes(key)) beep(540,52,.026,520);
+}
+function flashShutter(){
+  if(!flashEl) return;
+  flashEl.classList.remove('on'); void flashEl.offsetWidth; flashEl.classList.add('on');
+}
+function setCommand(key, ready=false, warn=false){
+  lastCommandKey = key;
+  commandBox.textContent = L(key);
+  commandBox.classList.toggle('ready', ready);
+  commandBox.classList.toggle('warn', warn && !ready);
+  alignmentBeep(key, ready);
+}
+function setCaptureReady(isReady){
+  alignmentReady = !!isReady;
+  const d = dict();
+  if(captureBtn){
+    captureBtn.disabled = !alignmentReady;
+    captureBtn.textContent = alignmentReady ? L('ready') : d.captureBtnLocked;
+    captureBtn.classList.toggle('secondary', !alignmentReady);
+    captureBtn.classList.toggle('warn', alignmentReady);
+    captureBtn.title = alignmentReady ? d.titleReady : d.titleLocked;
+  }
+  if(commandBox){
+    commandBox.classList.toggle('capture-ready', alignmentReady);
+    commandBox.classList.toggle('capture-locked', !alignmentReady);
+    commandBox.setAttribute('aria-disabled', alignmentReady ? 'false' : 'true');
+    commandBox.title = alignmentReady ? d.commandTitleReady : d.commandTitleLocked;
+  }
+}
+function flashCapturedButton(){
+  if(!captureBtn) return;
+  captureBtn.disabled = true;
+  captureBtn.textContent = L('captured');
+  captureBtn.classList.remove('secondary');
+  captureBtn.classList.add('warn');
+  if(commandBox){
+    commandBox.classList.remove('capture-ready');
+    commandBox.classList.add('capture-locked');
+    commandBox.setAttribute('aria-disabled','true');
+  }
+}
+
+const CASE_DB_NAME = 'RITA_PATIENT_CASES_V1';
+const CASE_STORE = 'photos';
+let caseDBPromise = null;
+
+function cleanFolderPart(value){
+  // Browser-safe sanitizing. Avoids Unicode property regex so older Safari/iOS versions do not break the whole script.
+  let s = String(value || '').trim();
+  s = s.replace(/ı/g,'i').replace(/İ/g,'I')
+       .replace(/[ğĞ]/g,'g').replace(/[üÜ]/g,'u')
+       .replace(/[şŞ]/g,'s').replace(/[öÖ]/g,'o').replace(/[çÇ]/g,'c');
+  if(s.normalize) s = s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'');
+  return s.replace(/[^A-Za-z0-9._-]+/g,'_').replace(/^_+|_+$/g,'').slice(0,80);
+}
+function currentPatient(){
+  const first = cleanFolderPart(patientFirst.value);
+  const last = cleanFolderPart(patientLast.value);
+  const code = cleanFolderPart(patientCode.value);
+  const ageRaw = String(patientAge.value || '').trim();
+  const age = ageRaw ? Math.max(0, Math.min(120, Number(ageRaw) || 0)) : '';
+  const gender = patientGender.value || '';
+  const folder = [last, first, code].filter(Boolean).join('_') || dict().unnamedPatient;
+  const key = folder.toLowerCase();
+  return {first,last,code,age,gender,folder,key};
+}
+function phaseLabel(value){
+  const d = dict();
+  return value === 'preop' ? d.phasePre : value === 'postop' ? d.phasePost : d.phaseIntra;
+}
+function variantLabel(value){
+  const d = dict();
+  if(value === 'edited-target') return d.variantTarget;
+  if(value === 'alignment-overlay') return d.variantOverlay;
+  return d.variantOriginal;
+}
+function genderLabel(value){
+  const d = dict();
+  if(value === 'female') return d.genderFemale;
+  if(value === 'male') return d.genderMale;
+  if(value === 'other') return d.genderOther;
+  if(value === 'not-specified') return d.genderNS;
+  return '';
+}
+function setCaseStatus(text, good=false){
+  caseStatus.textContent = text || '';
+  caseStatus.style.color = good ? 'var(--green)' : 'var(--yellow)';
+}
+function updateCasePath(){
+  const p = currentPatient();
+  const phase = phaseSelect.value;
+  const variant = photoVariantSelect.value;
+  casePath.textContent = `${dict().caseFolderPrefix} RITA_Cases/${p.folder}/${phase}/${variant}/`;
+}
+function escapeHTML(value){
+  return String(value || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function dataURLToBlob(dataURL){
+  const parts = dataURL.split(',');
+  const mime = (parts[0].match(/:(.*?);/) || [,'image/png'])[1];
+  const binary = atob(parts[1]);
+  const len = binary.length;
+  const bytes = new Uint8Array(len);
+  for(let i=0;i<len;i++) bytes[i] = binary.charCodeAt(i);
+  return new Blob([bytes], {type:mime});
+}
+function openCaseDB(){
+  if(caseDBPromise) return caseDBPromise;
+  caseDBPromise = new Promise((resolve,reject)=>{
+    if(!window.indexedDB){ reject(new Error('IndexedDB is not available in this browser.')); return; }
+    const req = indexedDB.open(CASE_DB_NAME, 1);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      const store = db.createObjectStore(CASE_STORE, {keyPath:'id'});
+      store.createIndex('patientKey','patientKey',{unique:false});
+      store.createIndex('createdAt','createdAt',{unique:false});
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+  return caseDBPromise;
+}
+async function putCasePhoto(record){
+  const db = await openCaseDB();
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction(CASE_STORE,'readwrite');
+    tx.objectStore(CASE_STORE).put(record);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+async function getCasePhotos(patientKey){
+  const db = await openCaseDB();
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction(CASE_STORE,'readonly');
+    const store = tx.objectStore(CASE_STORE);
+    const index = store.index('patientKey');
+    const req = index.getAll(patientKey);
+    req.onsuccess = () => resolve((req.result || []).sort((a,b)=>a.createdAt.localeCompare(b.createdAt)));
+    req.onerror = () => reject(req.error);
+  });
+}
+async function getAllCasePhotos(){
+  const db = await openCaseDB();
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction(CASE_STORE,'readonly');
+    const req = tx.objectStore(CASE_STORE).getAll();
+    req.onsuccess = () => resolve(req.result || []);
+    req.onerror = () => reject(req.error);
+  });
+}
+async function getRecordById(id){
+  const db = await openCaseDB();
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction(CASE_STORE,'readonly');
+    const req = tx.objectStore(CASE_STORE).get(id);
+    req.onsuccess = () => resolve(req.result || null);
+    req.onerror = () => reject(req.error);
+  });
+}
+async function deleteCasePhotoById(id){
+  const db = await openCaseDB();
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction(CASE_STORE,'readwrite');
+    tx.objectStore(CASE_STORE).delete(id);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+async function deleteCasePhotos(patientKey){
+  const db = await openCaseDB();
+  return new Promise((resolve,reject)=>{
+    const tx = db.transaction(CASE_STORE,'readwrite');
+    const store = tx.objectStore(CASE_STORE);
+    const index = store.index('patientKey');
+    const req = index.getAllKeys(patientKey);
+    req.onsuccess = () => {
+      (req.result || []).forEach(key=>store.delete(key));
+    };
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+function caseFileName(record, n=0){
+  const stamp = new Date(record.createdAt).toISOString().replace(/[:.]/g,'-');
+  const viewPart = cleanFolderPart(record.view || 'view');
+  return `${record.patientFolder}_${record.phase}_${record.variant}_${viewPart}_${stamp}_${String(n+1).padStart(2,'0')}.png`;
+}
+async function renderCaseLog(){
+  updateCasePath();
+  const p = currentPatient();
+  const d = dict();
+  if(!p.first && !p.last){
+    caseLog.innerHTML = `<div class="hint">${d.noCaseYet}</div>`;
+    return;
+  }
+  try{
+    const photos = await getCasePhotos(p.key);
+    if(!photos.length){
+      caseLog.innerHTML = `<div class="hint">${d.noPhotosYet}</div>`;
+      return;
+    }
+    caseLog.innerHTML = photos.slice().reverse().map(rec => `
+      <div class="case-entry">
+        <img src="${rec.dataUrl}" alt="" />
+        <div>
+          <b>${escapeHTML(phaseLabel(rec.phase))} \u00b7 ${escapeHTML(variantLabel(rec.variant))}</b>
+          <span>${escapeHTML(rec.view)} \u00b7 ${new Date(rec.createdAt).toLocaleString()}</span>
+          <span>${escapeHTML(rec.patientFolder)}${rec.patientAge || rec.patientGender ? ' \u00b7 ' + escapeHTML([rec.patientAge ? ('Age ' + rec.patientAge) : '', genderLabel(rec.patientGender)].filter(Boolean).join(' \u00b7 ')) : ''}</span>
+          <div class="case-entry-actions">
+            <button type="button" class="mini-btn cyan" data-action="ref" data-id="${rec.id}">${d.actionReference}</button>
+            <button type="button" class="mini-btn red" data-action="del" data-id="${rec.id}">${d.actionDelete}</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }catch(err){
+    caseLog.innerHTML = `<div class="hint">${d.statusLocalUnavailable}</div>`;
+  }
+}
+caseLog.addEventListener('click', async (e)=>{
+  const refBtn = e.target.closest('[data-action="ref"]');
+  const delBtn = e.target.closest('[data-action="del"]');
+  if(refBtn){ await applyReferenceById(refBtn.dataset.id); return; }
+  if(delBtn){
+    if(!window.confirm(dict().confirmDeletePhoto)) return;
+    await deleteCasePhotoById(delBtn.dataset.id);
+    await refreshCaseUI();
+  }
+});
+async function refreshCaseUI(){
+  await renderCaseLog();
+  await refreshRefOverlayOptions();
+  await refreshComparePickers();
+  await refreshRecentPatients();
+}
+async function saveCurrentPhoto(){
+  const d = dict();
+  if(!lastPhoto && !lastOriginalPhoto){
+    setCaseStatus(d.statusCaptureFirst);
+    return false;
+  }
+  const p = currentPatient();
+  if(!p.first || !p.last){
+    setCaseStatus(d.statusEnterNameSave);
+    return false;
+  }
+  const selectedVariant = photoVariantSelect.value;
+  const dataUrl = selectedVariant === 'original-capture' && lastOriginalPhoto ? lastOriginalPhoto : lastPhoto;
+  const record = {
+    id: `${p.key}_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+    patientKey: p.key,
+    patientFolder: p.folder,
+    patientFirst: p.first,
+    patientLast: p.last,
+    patientCode: p.code,
+    patientAge: p.age,
+    patientGender: p.gender,
+    phase: phaseSelect.value,
+    variant: selectedVariant,
+    view,
+    dataUrl,
+    createdAt: new Date().toISOString()
+  };
+  try{
+    await putCasePhoto(record);
+    setCaseStatus(msgSaved(`RITA_Cases/${p.folder}/${record.phase}/${record.variant}/`), true);
+    await refreshCaseUI();
+    return true;
+  }catch(err){
+    console.error(err);
+    setCaseStatus(d.statusSaveFailed);
+    return false;
+  }
+}
+async function exportPatientFolder(){
+  const d = dict();
+  const p = currentPatient();
+  if(!p.first || !p.last){
+    setCaseStatus(d.statusEnterNameExport);
+    return;
+  }
+  if(!window.JSZip){
+    setCaseStatus(d.statusZipUnavailable);
+    return;
+  }
+  try{
+    const photos = await getCasePhotos(p.key);
+    if(!photos.length){
+      setCaseStatus(d.statusNoSavedPhotos);
+      return;
+    }
+    const zip = new JSZip();
+    const root = zip.folder(`RITA_Cases/${p.folder}`);
+    const manifest = {
+      patientFolder:p.folder,
+      patientFirst:p.first,
+      patientLast:p.last,
+      patientCode:p.code,
+      patientAge:p.age,
+      patientGender:p.gender,
+      exportedAt:new Date().toISOString(),
+      note:'RITA browser prototype export. Confirm data privacy and institutional storage rules before clinical use.',
+      photos:photos.map((rec,i)=>({
+        file:caseFileName(rec,i),
+        phase:rec.phase,
+        variant:rec.variant,
+        view:rec.view,
+        createdAt:rec.createdAt
+      }))
+    };
+    root.file('manifest.json', JSON.stringify(manifest,null,2));
+    root.file('README.txt',
+`RITA Patient Case Export
+Patient folder: ${p.folder}
+Age: ${p.age || 'not entered'}
+Gender: ${genderLabel(p.gender) || 'not entered'}
+Exported: ${new Date().toLocaleString()}
+
+Folder structure:
+preop/original-capture
+preop/edited-target
+preop/alignment-overlay
+intraop/original-capture
+intraop/edited-target
+intraop/alignment-overlay
+postop/original-capture
+postop/edited-target
+postop/alignment-overlay
+
+This browser prototype stores images locally in the browser until exported. It is not a hospital PACS, EMR, or validated clinical archiving system.`);
+    photos.forEach((rec,i)=>{
+      root.folder(rec.phase).folder(rec.variant).file(caseFileName(rec,i), dataURLToBlob(rec.dataUrl));
+    });
+    const blob = await zip.generateAsync({type:'blob'});
+    const res = await downloadBlob(blob, `${p.folder}_RITA_patient_folder.zip`);
+    if(res !== 'pending' && res !== 'cancelled') setCaseStatus(msgExported(photos.length), true);
+  }catch(err){
+    console.error(err);
+    setCaseStatus(d.statusExportFailed);
+  }
+}
+function anchorDownload(blob, filename){
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 2500);
+}
+// iPad: open the system share sheet (Save to Photos / Files / AirDrop) when available.
+async function downloadBlob(blob, filename){
+  let file = null;
+  try{ file = new File([blob], filename, {type: blob.type || 'application/octet-stream'}); }catch(e){}
+  if(file && navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
+    try{
+      await navigator.share({files:[file], title:filename});
+      return 'shared';
+    }catch(err){
+      if(err && err.name === 'AbortError') return 'cancelled';
+      if(err && err.name === 'NotAllowedError'){
+        // The tap "expired" while the file was being prepared (e.g. a large ZIP). Offer a fresh tap.
+        offerShareAgain(file, filename);
+        return 'pending';
+      }
+      console.warn('Share failed, falling back to download', err);
+    }
+  }
+  anchorDownload(blob, filename);
+  return 'downloaded';
+}
+function offerShareAgain(file, filename){
+  const tr = currentLang === 'tr';
+  caseStatus.innerHTML = '';
+  const msg = document.createElement('div');
+  msg.textContent = tr ? `${filename} hazır. Kaydetmek veya paylaşmak için dokunun.` : `${filename} is ready. Tap to save or share.`;
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'btn cyan share-again';
+  b.textContent = tr ? 'Kaydet / Paylaş' : 'Save / Share';
+  b.addEventListener('click', async()=>{
+    try{ await navigator.share({files:[file], title:filename}); setCaseStatus(tr ? 'Paylaşıldı.' : 'Shared.', true); }
+    catch(err){ if(!err || err.name !== 'AbortError') anchorDownload(file, filename); }
+  });
+  caseStatus.style.color = 'var(--yellow)';
+  caseStatus.append(msg, b);
+}
+
+async function refreshRecentPatients(){
+  try{
+    const all = await getAllCasePhotos();
+    const map = new Map();
+    all.forEach(r=>{
+      const prev = map.get(r.patientKey);
+      if(!prev || r.createdAt > prev.createdAt) map.set(r.patientKey, r);
+    });
+    const list = Array.from(map.values()).sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).slice(0,8);
+    if(!list.length){ recentChips.innerHTML=''; recentChips.style.display='none'; return; }
+    recentChips.style.display='flex';
+    recentChips.innerHTML = list.map(r=>`<button type="button" class="chip" data-key="${escapeHTML(r.patientKey)}">${escapeHTML(r.patientFirst||'')} ${escapeHTML(r.patientLast||'')}${r.patientCode?(' \u00b7 '+escapeHTML(r.patientCode)):''}</button>`).join('');
+    recentChips.querySelectorAll('.chip').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        const rec = list.find(r=>r.patientKey === btn.dataset.key);
+        if(!rec) return;
+        patientFirst.value = rec.patientFirst || ''; patientLast.value = rec.patientLast || '';
+        patientCode.value = rec.patientCode || ''; patientAge.value = rec.patientAge || '';
+        patientGender.value = rec.patientGender || '';
+        await refreshCaseUI();
+      });
+    });
+  }catch(e){
+    recentChips.style.display='none';
+  }
+}
+
+async function refreshRefOverlayOptions(){
+  const p = currentPatient();
+  const d = dict();
+  const keep = refOverlaySelect.value;
+  refOverlaySelect.innerHTML = `<option value="">${d.ghostRefNone}</option>`;
+  if(p.first || p.last){
+    try{
+      const photos = await getCasePhotos(p.key);
+      photos.slice().reverse().forEach(rec=>{
+        const o = document.createElement('option'); o.value = rec.id;
+        o.textContent = `${phaseLabel(rec.phase)} \u00b7 ${variantLabel(rec.variant)} \u00b7 ${rec.view} \u00b7 ${new Date(rec.createdAt).toLocaleDateString()}`;
+        refOverlaySelect.appendChild(o);
+      });
+    }catch(e){}
+  }
+  const values = Array.from(refOverlaySelect.options).map(o=>o.value);
+  refOverlaySelect.value = values.includes(keep) ? keep : '';
+  updateRefOverlay();
+}
+async function updateRefOverlay(){
+  const id = refOverlaySelect.value;
+  if(!id || !refOverlayToggle.checked){
+    refOverlayImg.style.display = 'none';
+    refOverlayImg.removeAttribute('src');
+    return;
+  }
+  try{
+    const rec = await getRecordById(id);
+    if(!rec){ refOverlayImg.style.display = 'none'; return; }
+    refOverlayImg.src = rec.dataUrl;
+    refOverlayImg.style.opacity = String(Number(refOverlayOpacity.value)/100);
+    refOverlayImg.style.display = 'block';
+  }catch(e){ refOverlayImg.style.display = 'none'; }
+}
+refOverlaySelect.addEventListener('change', updateRefOverlay);
+refOverlayToggle.addEventListener('change', updateRefOverlay);
+refOverlayOpacity.addEventListener('input', ()=>{ refOverlayImg.style.opacity = String(Number(refOverlayOpacity.value)/100); });
+
+function selectTab(v){
+  const btn = document.querySelector(`.tab[data-view="${v}"]`);
+  if(btn) btn.click();
+}
+async function applyReferenceById(id){
+  const rec = await getRecordById(id);
+  if(!rec) return;
+  if(currentMode === 'compare' && rec.view){ selectTab(rec.view); }
+  await refreshRefOverlayOptions();
+  const values = Array.from(refOverlaySelect.options).map(o=>o.value);
+  if(values.includes(id)) refOverlaySelect.value = id;
+  refOverlayToggle.checked = true;
+  updateRefOverlay();
+}
+
+function smartDefaultTarget(photos){
+  return photos.find(r=>r.variant==='edited-target') || photos.find(r=>r.phase==='preop') || photos[0];
+}
+function smartDefaultResult(photos){
+  const postops = photos.filter(r=>r.phase==='postop');
+  if(postops.length) return postops[postops.length-1];
+  return photos[photos.length-1];
+}
+async function refreshComparePickers(){
+  const p = currentPatient();
+  compareTargetSelect.innerHTML = ''; compareResultSelect.innerHTML = '';
+  if(!p.first && !p.last){ renderCompareStage(); return; }
+  let photos = [];
+  try{ photos = await getCasePhotos(p.key); }catch(e){}
+  if(!photos.length){ renderCompareStage(); return; }
+  const optHtml = photos.map(rec=>`<option value="${rec.id}">${escapeHTML(phaseLabel(rec.phase))} \u00b7 ${escapeHTML(variantLabel(rec.variant))} \u00b7 ${escapeHTML(rec.view)} \u00b7 ${new Date(rec.createdAt).toLocaleDateString()}</option>`).join('');
+  compareTargetSelect.innerHTML = optHtml; compareResultSelect.innerHTML = optHtml;
+  const t = smartDefaultTarget(photos), r = smartDefaultResult(photos);
+  if(t) compareTargetSelect.value = t.id;
+  if(r) compareResultSelect.value = r.id;
+  renderCompareStage();
+}
+async function renderCompareStage(){
+  const tid = compareTargetSelect.value, rid = compareResultSelect.value;
+  compareTagLeft.textContent = dict().compareTagTarget;
+  compareTagRight.textContent = dict().compareTagResult;
+  if(!tid || !rid){
+    compareEmpty.style.display = 'grid';
+    compareImgA.style.display = 'none'; compareImgB.style.display = 'none'; compareHandle.style.display = 'none';
+    return;
+  }
+  const [t,r] = await Promise.all([getRecordById(tid), getRecordById(rid)]);
+  if(!t || !r){
+    compareEmpty.style.display = 'grid';
+    compareImgA.style.display = 'none'; compareImgB.style.display = 'none'; compareHandle.style.display = 'none';
+    return;
+  }
+  compareEmpty.style.display = 'none';
+  compareImgA.src = t.dataUrl; compareImgB.src = r.dataUrl;
+  compareImgA.style.display = 'block'; compareImgB.style.display = 'block'; compareHandle.style.display = 'block';
+  setComparePct(50);
+}
+function setComparePct(pct){
+  pct = Math.max(0, Math.min(100, pct));
+  compareImgB.style.clipPath = `inset(0 0 0 ${pct}%)`;
+  compareHandle.style.left = pct + '%';
+}
+function updateComparePointer(e){
+  const r = compareStage.getBoundingClientRect();
+  let pct = ((e.clientX - r.left) / r.width) * 100;
+  setComparePct(pct);
+}
+compareStage.addEventListener('pointerdown', e=>{
+  if(compareImgB.style.display === 'none') return;
+  compareDragging = true; updateComparePointer(e);
+  try{ compareStage.setPointerCapture(e.pointerId); }catch(err){}
+});
+compareStage.addEventListener('pointermove', e=>{ if(compareDragging) updateComparePointer(e); });
+['pointerup','pointercancel','pointerleave'].forEach(ev=>compareStage.addEventListener(ev, ()=>{ compareDragging = false; }));
+compareTargetSelect.addEventListener('change', renderCompareStage);
+compareResultSelect.addEventListener('change', renderCompareStage);
+compareGridToggle.addEventListener('change', ()=>{ compareGridOverlay.classList.toggle('on', compareGridToggle.checked); });
+useAsReferenceBtn.addEventListener('click', async ()=>{
+  const tid = compareTargetSelect.value;
+  if(!tid) return;
+  await applyReferenceById(tid);
+});
+
+function switchMode(mode){
+  currentMode = mode;
+  if(mode === 'compare'){
+    captureLayout.style.display = 'none';
+    compareCard.style.display = 'block';
+    refreshComparePickers();
+  }else{
+    captureLayout.style.display = '';
+    compareCard.style.display = 'none';
+  }
+}
+
+async function saveCaseClickHandler(){ await saveCurrentPhoto(); }
+saveCaseBtn.addEventListener('click', saveCaseClickHandler);
+exportCaseBtn.addEventListener('click', exportPatientFolder);
+clearCaseBtn.addEventListener('click', async()=>{
+  const d = dict();
+  const p = currentPatient();
+  if(!p.first || !p.last){ setCaseStatus(d.statusEnterNameClear); return; }
+  if(!window.confirm(d.confirmClearCase)) return;
+  await deleteCasePhotos(p.key);
+  setCaseStatus(d.statusCaseCleared, true);
+  await refreshCaseUI();
+});
+[patientFirst,patientLast,patientCode,patientAge,patientGender,phaseSelect,photoVariantSelect].forEach(el=>{
+  el.addEventListener('input', refreshCaseUI);
+  el.addEventListener('change', refreshCaseUI);
+});
+
+function isSecureCameraContext(){
+  return window.isSecureContext || location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+}
+function setCameraHint(text, good=false){
+  if(!cameraHint) return;
+  cameraHint.textContent = text;
+  cameraHint.style.color = good ? 'var(--green)' : 'var(--muted)';
+}
+function cameraIsLive(){
+  return !!(stream && stream.active && video.srcObject === stream && video.readyState >= 2 && video.videoWidth > 0);
+}
+function stopCamera(){
+  releaseWakeLock();
+  setCaptureReady(false);
+  if(stream){
+    try{ stream.getTracks().forEach(t=>t.stop()); }catch(e){}
+  }
+  stream = null;
+  video.srcObject = null;
+  lastLandmarks = null;
+  lastLandmarkAt = 0;
+}
+function selectedCameraValue(){
+  return cameraSelect.value || 'environment';
+}
+async function refreshCameraList(){
+  if(!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices){
+    setCameraHint('Camera device listing is not available in this browser.');
+    return;
+  }
+  try{
+    const current = selectedCameraValue();
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const cams = devices.filter(d=>d.kind === 'videoinput');
+    const base = [
+      {value:'environment', label:dict().camBack},
+      {value:'user', label:dict().camFront},
+      {value:'any', label:'Any available camera'}
+    ];
+    cameraSelect.innerHTML = '';
+    base.forEach(opt=>{
+      const o=document.createElement('option'); o.value=opt.value; o.textContent=opt.label; cameraSelect.appendChild(o);
+    });
+    cams.forEach((d,i)=>{
+      const o=document.createElement('option');
+      o.value='device:'+d.deviceId;
+      o.textContent=d.label || `Camera ${i+1}`;
+      cameraSelect.appendChild(o);
+    });
+    const values = Array.from(cameraSelect.options).map(o=>o.value);
+    cameraSelect.value = values.includes(current) ? current : (cams.length ? 'device:'+cams[0].deviceId : 'environment');
+    setCameraHint(cams.length ? `Detected ${cams.length} camera device(s).` : 'No named camera devices detected yet. Start Camera may request permission first.', !!cams.length);
+  }catch(err){
+    setCameraHint('Could not refresh camera list. You can still try Start Camera.');
+    console.warn(err);
+  }
+}
+function buildCameraAttempts(){
+  const value = selectedCameraValue();
+  const attempts = [];
+  if(value.startsWith('device:')){
+    const id = value.slice(7);
+    attempts.push({audio:false, video:{deviceId:{exact:id}, width:{ideal:1920}, height:{ideal:1440}, aspectRatio:{ideal:4/3}}});
+    attempts.push({audio:false, video:{deviceId:{exact:id}, width:{ideal:1280}, height:{ideal:720}}});
+    attempts.push({audio:false, video:{deviceId:{ideal:id}}});
+  }else if(value === 'user' || value === 'environment'){
+    facing = value;
+    attempts.push({audio:false, video:{facingMode:{ideal:value}, width:{ideal:1920}, height:{ideal:1440}, aspectRatio:{ideal:4/3}}});
+    attempts.push({audio:false, video:{facingMode:{ideal:value}, width:{ideal:1280}, height:{ideal:720}}});
+    attempts.push({audio:false, video:{facingMode:{ideal:value}}});
+  }
+  attempts.push({audio:false, video:{width:{ideal:1280}, height:{ideal:720}}});
+  attempts.push({audio:false, video:true});
+  return attempts;
+}
+async function playVideoFromStream(s){
+  video.setAttribute('autoplay','');
+  video.setAttribute('playsinline','');
+  video.setAttribute('webkit-playsinline','');
+  video.muted = true;
+  video.srcObject = s;
+  await new Promise((resolve)=>{
+    if(video.readyState >= 1) resolve();
+    else video.onloadedmetadata = () => resolve();
+  });
+  const playPromise = video.play();
+  if(playPromise && typeof playPromise.then === 'function') await playPromise;
+}
+async function startCamera(options={}){
+  unlockAudio();
+  const keepExisting = !!options.keepExisting;
+  if(cameraIsLive() && keepExisting){
+    setPill(cameraState,'Camera active','ok');
+    setCameraHint(`${phaseLabel(phaseSelect.value)} mode is using the active live camera.`, true);
+    return true;
+  }
+  if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+    setPill(cameraState,'Camera unsupported','red');
+    setCameraHint('Camera API is not available. Use Safari/Chrome/Edge over HTTPS, localhost, or a supported local context.');
+    setCommand('startCamera',false,true);
+    return false;
+  }
+  if(!isSecureCameraContext()){
+    setPill(cameraState,'Secure context needed','red');
+    setCameraHint('Camera access requires HTTPS, localhost, or a supported local file context.');
+    setCommand('startCamera',false,true);
+    return false;
+  }
+  stopCamera();
+  const attempts = buildCameraAttempts();
+  let lastError = null;
+  for(const constraints of attempts){
+    try{
+      setPill(cameraState,'Requesting permission','warn');
+      setCameraHint(`Starting live camera for ${phaseLabel(phaseSelect.value)} mode...`);
+      const s = await navigator.mediaDevices.getUserMedia(constraints);
+      await playVideoFromStream(s);
+      stream = s;
+      const track = stream.getVideoTracks()[0];
+      const label = track && track.label ? track.label : 'Camera active';
+      setPill(cameraState,'Camera active','ok');
+      setCameraHint(`${phaseLabel(phaseSelect.value)} mode: live camera is active${label ? ' (' + label + ')' : ''}.`, true);
+      fitCanvas();
+      requestWakeLock();
+      await refreshCameraList();
+      if(aiToggle.checked) ensureFaceMesh();
+      return true;
+    }catch(err){
+      lastError = err;
+      console.warn('Camera attempt failed', constraints, err);
+      try{ if(video.srcObject) video.srcObject.getTracks().forEach(t=>t.stop()); }catch(e){}
+      video.srcObject = null;
+    }
+  }
+  const name = lastError && lastError.name ? lastError.name : 'CameraError';
+  setPill(cameraState,'Camera failed','red');
+  setCameraHint(`Camera could not start: ${name}. Allow camera permission, close other apps using the camera, then tap Refresh Cameras and Start Camera.`);
+  setCommand('startCamera',false,true);
+  console.error(lastError);
+  return false;
+}
+async function ensureCameraForCurrentMode(){
+  if(cameraIsLive()){
+    setPill(cameraState,'Camera active','ok');
+    setCameraHint(`${phaseLabel(phaseSelect.value)} mode: live camera remains active.`, true);
+    return true;
+  }
+  return startCamera({keepExisting:true});
+}
+startBtn.addEventListener('click',()=>{ unlockAudio(); startCamera(); });
+switchBtn.addEventListener('click',()=>{
+  const v = selectedCameraValue();
+  if(v === 'environment') cameraSelect.value = 'user';
+  else if(v === 'user') cameraSelect.value = 'environment';
+  else cameraSelect.value = 'environment';
+  startCamera();
+});
+if(refreshCamerasBtn) refreshCamerasBtn.addEventListener('click',async()=>{ await refreshCameraList(); if(!cameraIsLive()) setCameraHint('Camera list refreshed. Tap Start Camera.'); });
+resetBtn.addEventListener('click',()=>{stableSince=0; lastLandmarks=null; lastLandmarkAt=0; setCaptureReady(false);});
+cameraSelect.addEventListener('change',()=>{ if(cameraIsLive()) startCamera(); });
+phaseSelect.addEventListener('change',()=>{ ensureCameraForCurrentMode(); });
+photoVariantSelect.addEventListener('change',()=>{ ensureCameraForCurrentMode(); });
+aiToggle.addEventListener('change',()=>{ if(aiToggle.checked) ensureFaceMesh(); });
+function unlockAudio(){
+  try{ audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)(); if(audioCtx.state === 'suspended') audioCtx.resume(); }catch(e){}
+}
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); b.classList.add('active');
+  const v = b.dataset.view;
+  if(v === 'compare'){ switchMode('compare'); return; }
+  switchMode('capture');
+  view = v; stableSince=0; setCaptureReady(false); ensureCameraForCurrentMode();
+}));
+
+async function ensureFaceMesh(){
+  if(modelReady || modelFailed || !aiToggle.checked) return;
+  if(!window.FaceMesh){
+    modelFailed = true; setPill(modelState,'AI model unavailable','red'); return;
+  }
+  try{
+    setPill(modelState,'AI model loading','warn'); setCommand('loading',false,true);
+    faceMesh = new FaceMesh({locateFile:(file)=>`https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`});
+    faceMesh.setOptions({maxNumFaces:1, refineLandmarks:true, minDetectionConfidence:0.58, minTrackingConfidence:0.58});
+    faceMesh.onResults(onFaceResults);
+    modelReady = true; setPill(modelState,'AI nose model ready','ok'); analyzeLoop();
+  }catch(err){
+    modelFailed = true; setPill(modelState,'AI model failed','red'); console.error(err);
+  }
+}
+function onFaceResults(results){
+  if(results.multiFaceLandmarks && results.multiFaceLandmarks.length){
+    lastLandmarks = results.multiFaceLandmarks[0]; lastLandmarkAt = performance.now();
+  }
+}
+async function analyzeLoop(){
+  if(!modelReady || !faceMesh) return;
+  const now = performance.now();
+  if(stream && aiToggle.checked && video.readyState >= 2 && !processing && now - lastProcessAt > 70){
+    processing = true; lastProcessAt = now;
+    try{ await faceMesh.send({image:video}); }catch(e){ console.warn(e); }
+    processing = false;
+  }
+  requestAnimationFrame(analyzeLoop);
+}
+
+function clear(){ const r=canvas.getBoundingClientRect(); ctx.clearRect(0,0,r.width,r.height); }
+function line(x1,y1,x2,y2,color='rgba(45,242,138,.95)',width=3,dash=[]){ctx.save();ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineCap='round';ctx.lineJoin='round';ctx.setLineDash(dash);ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();ctx.restore();}
+function circle(x,y,r,color,width=3,fill=false){ctx.save();ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2); if(fill){ctx.fillStyle=color;ctx.fill();}else{ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke();}ctx.restore();}
+function text(t,x,y,color='#fff',size=13,align='center'){ctx.save();ctx.font=`900 ${size}px -apple-system,BlinkMacSystemFont,Segoe UI,Arial`;ctx.fillStyle=color;ctx.textAlign=align;ctx.shadowColor='rgba(0,0,0,.75)';ctx.shadowBlur=5;ctx.fillText(t,x,y);ctx.restore();}
+function arrow(x1,y1,x2,y2,color='rgba(255,85,112,.96)',label=''){
+  line(x1,y1,x2,y2,color,6); const a=Math.atan2(y2-y1,x2-x1), len=18;
+  line(x2,y2,x2-len*Math.cos(a-Math.PI/6),y2-len*Math.sin(a-Math.PI/6),color,6);
+  line(x2,y2,x2-len*Math.cos(a+Math.PI/6),y2-len*Math.sin(a+Math.PI/6),color,6);
+  if(label) text(label,(x1+x2)/2,(y1+y2)/2-12,color,14);
+}
+function roundedRect(x,y,w,h,r,stroke,fill){
+  const rr = Math.min(r,w/2,h/2); ctx.beginPath();
+  ctx.moveTo(x+rr,y); ctx.arcTo(x+w,y,x+w,y+h,rr); ctx.arcTo(x+w,y+h,x,y+h,rr); ctx.arcTo(x,y+h,x,y,rr); ctx.arcTo(x,y,x+w,y,rr); ctx.closePath();
+  if(fill){ctx.fillStyle=fill;ctx.fill();} if(stroke){ctx.strokeStyle=stroke;ctx.stroke();}
+}
+function template(){
+  const w = canvas.getBoundingClientRect().width, h = canvas.getBoundingClientRect().height;
+  const scale = Number(templateSizeSlider.value)/100;
+  const clinicalDistance = Number(distanceSlider.value)/100;
+  const th = h * scale;
+  const tw = th * (view === 'frontal' ? .42 : view === 'basal' ? .62 : .35);
+  return {cx:w/2, cy:h*.48, w:tw, h:th, top:h*.48-th*.48, bottom:h*.48+th*.48,
+    tipX:w/2 + (view==='right'?tw*.20:view==='left'?-tw*.20:0),
+    tipY:h*.48 + (view==='basal'?th*.02:th*.13), idealFaceH:h*clinicalDistance};
+}
+function drawTemplate(t){
+  ctx.save(); ctx.globalAlpha=.16; roundedRect(t.cx-t.w*.75,t.top,t.w*1.5,t.h,28,null,'rgba(45,242,138,.20)'); ctx.restore();
+  ctx.save(); ctx.lineWidth=2; ctx.setLineDash([8,8]); roundedRect(t.cx-t.w*.75,t.top,t.w*1.5,t.h,28,'rgba(45,242,138,.42)',null); ctx.restore();
+  if(view==='frontal') drawFrontal(t); else if(view==='right') drawProfile(t,'right'); else if(view==='left') drawProfile(t,'left'); else drawBasal(t);
+}
+function drawFrontal(t){
+  line(t.cx,t.top,t.cx,t.bottom,'rgba(45,242,138,.95)',3,[7,8]);
+  line(t.cx-t.w*.42,t.top+t.h*.18,t.cx+t.w*.42,t.top+t.h*.18,'rgba(53,215,255,.8)',2,[6,7]);
+  ctx.save();ctx.strokeStyle='rgba(45,242,138,.96)';ctx.lineWidth=4;ctx.lineCap='round';ctx.beginPath();
+  ctx.moveTo(t.cx,t.top+t.h*.10); ctx.bezierCurveTo(t.cx-t.w*.15,t.cy-t.h*.18,t.cx-t.w*.12,t.cy+t.h*.05,t.tipX,t.tipY);
+  ctx.bezierCurveTo(t.cx+t.w*.12,t.cy+t.h*.05,t.cx+t.w*.15,t.cy-t.h*.18,t.cx,t.top+t.h*.10);ctx.stroke();ctx.restore();
+  line(t.cx-t.w*.48,t.cy+t.h*.27,t.cx+t.w*.48,t.cy+t.h*.27,'rgba(45,242,138,.88)',3);
+  line(t.cx-t.w*.18,t.cy+t.h*.39,t.cx+t.w*.18,t.cy+t.h*.39,'rgba(45,242,138,.88)',3);
+  circle(t.tipX,t.tipY,10,'rgba(255,209,102,.95)',3); circle(t.tipX,t.tipY,3,'rgba(255,209,102,.95)',1,true);
+  text(dict().tipTargetLabel,t.tipX,t.tipY+30,'#ffd166',12);
+}
+function drawProfile(t,side){
+  const s = side === 'right' ? 1 : -1;
+  line(t.cx,t.top,t.cx,t.bottom,'rgba(45,242,138,.7)',2,[7,8]);
+  ctx.save();ctx.strokeStyle='rgba(45,242,138,.96)';ctx.lineWidth=4;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();
+  ctx.moveTo(t.cx-s*t.w*.15,t.top+t.h*.08);
+  ctx.bezierCurveTo(t.cx+s*t.w*.05,t.cy-t.h*.28,t.cx+s*t.w*.22,t.cy-t.h*.05,t.tipX,t.tipY);
+  ctx.bezierCurveTo(t.cx+s*t.w*.05,t.cy+t.h*.19,t.cx-s*t.w*.08,t.cy+t.h*.32,t.cx-s*t.w*.16,t.cy+t.h*.42);
+  ctx.stroke();ctx.restore();
+  line(t.cx-s*t.w*.20,t.top+t.h*.14,t.tipX,t.tipY,'rgba(53,215,255,.80)',2,[5,6]);
+  line(t.cx-s*t.w*.22,t.cy+t.h*.29,t.cx+s*t.w*.28,t.cy+t.h*.29,'rgba(45,242,138,.88)',3);
+  circle(t.tipX,t.tipY,10,'rgba(255,209,102,.95)',3); circle(t.tipX,t.tipY,3,'rgba(255,209,102,.95)',1,true);
+}
+function drawBasal(t){
+  line(t.cx,t.top+t.h*.12,t.cx,t.bottom-t.h*.1,'rgba(45,242,138,.85)',3,[7,8]);
+  ctx.save();ctx.strokeStyle='rgba(45,242,138,.96)';ctx.lineWidth=4;ctx.lineCap='round';ctx.beginPath();
+  ctx.ellipse(t.cx-t.w*.2,t.cy+t.h*.07,t.w*.18,t.h*.17,-.1,0,Math.PI*2);
+  ctx.ellipse(t.cx+t.w*.2,t.cy+t.h*.07,t.w*.18,t.h*.17,.1,0,Math.PI*2);ctx.stroke();ctx.restore();
+  line(t.cx-t.w*.52,t.cy+t.h*.08,t.cx+t.w*.52,t.cy+t.h*.08,'rgba(45,242,138,.88)',3);
+  line(t.cx,t.cy-t.h*.12,t.cx,t.cy+t.h*.34,'rgba(53,215,255,.82)',2);
+  circle(t.tipX,t.tipY,10,'rgba(255,209,102,.95)',3); circle(t.tipX,t.tipY,3,'rgba(255,209,102,.95)',1,true);
+}
+function mapPoint(lm){
+  const r = canvas.getBoundingClientRect(); const vw = video.videoWidth || r.width; const vh = video.videoHeight || r.height;
+  const scale = Math.max(r.width/vw, r.height/vh); const dw = vw*scale, dh = vh*scale;
+  const ox = (r.width-dw)/2, oy = (r.height-dh)/2;
+  return {x:ox + lm.x*vw*scale, y:oy + lm.y*vh*scale, z:lm.z || 0};
+}
+function avgPoints(indices, lm){
+  let pts = indices.map(i=>lm[i]).filter(Boolean).map(mapPoint); if(!pts.length) return null;
+  return {x:pts.reduce((s,p)=>s+p.x,0)/pts.length, y:pts.reduce((s,p)=>s+p.y,0)/pts.length, z:pts.reduce((s,p)=>s+p.z,0)/pts.length};
+}
+function dist(a,b){ return Math.hypot(a.x-b.x,a.y-b.y); }
+function featureSet(){
+  if(!lastLandmarks || performance.now()-lastLandmarkAt > 850) return null;
+  const lm = lastLandmarks;
+  const noseTip = avgPoints([1,4], lm) || avgPoints([1], lm);
+  const bridge = avgPoints([6,168,197], lm) || avgPoints([6], lm);
+  const nostrilL = avgPoints([98,97,49], lm);
+  const nostrilR = avgPoints([327,326,279], lm);
+  const nostrilMid = avgPoints([98,327], lm);
+  const eyeL = avgPoints([33,133], lm), eyeR = avgPoints([263,362], lm);
+  const cheekL = avgPoints([234,93], lm), cheekR = avgPoints([454,323], lm);
+  const chin = avgPoints([152], lm), forehead = avgPoints([10], lm);
+  if(!noseTip || !bridge || !eyeL || !eyeR || !cheekL || !cheekR || !chin || !forehead) return null;
+  const faceCenter = {x:(cheekL.x+cheekR.x)/2, y:(forehead.y+chin.y)/2};
+  const faceW = Math.max(1, dist(cheekL,cheekR)); const faceH = Math.max(1, dist(forehead,chin));
+  const roll = Math.atan2(eyeR.y-eyeL.y, eyeR.x-eyeL.x)*180/Math.PI;
+  const yaw = (noseTip.x-faceCenter.x)/(faceW*0.5);
+  return {noseTip, bridge, nostrilL, nostrilR, nostrilMid, eyeL, eyeR, cheekL, cheekR, chin, forehead, faceCenter, faceW, faceH, roll, yaw};
+}
+function drawLandmarks(f){
+  if(!f || !landmarkToggle.checked) return;
+  line(f.forehead.x,f.forehead.y,f.bridge.x,f.bridge.y,'rgba(53,215,255,.75)',3,[6,6]);
+  line(f.bridge.x,f.bridge.y,f.noseTip.x,f.noseTip.y,'rgba(53,215,255,.95)',4);
+  if(f.nostrilL && f.nostrilR) line(f.nostrilL.x,f.nostrilL.y,f.nostrilR.x,f.nostrilR.y,'rgba(45,242,138,.9)',4);
+  line(f.eyeL.x,f.eyeL.y,f.eyeR.x,f.eyeR.y,'rgba(255,255,255,.45)',2,[5,6]);
+  circle(f.noseTip.x,f.noseTip.y,9,'rgba(255,209,102,.98)',4); circle(f.noseTip.x,f.noseTip.y,3,'rgba(255,209,102,.98)',1,true);
+  circle(f.bridge.x,f.bridge.y,5,'rgba(53,215,255,.98)',2,true);
+  if(f.nostrilL) circle(f.nostrilL.x,f.nostrilL.y,4,'rgba(45,242,138,.95)',2,true);
+  if(f.nostrilR) circle(f.nostrilR.x,f.nostrilR.y,4,'rgba(45,242,138,.95)',2,true);
+  ctx.save(); ctx.strokeStyle='rgba(45,242,138,.22)'; ctx.lineWidth=2; ctx.setLineDash([8,8]);
+  roundedRect(f.faceCenter.x-f.faceW*.62,f.faceCenter.y-f.faceH*.55,f.faceW*1.24,f.faceH*1.1,22,'rgba(45,242,138,.32)',null); ctx.restore();
+}
+function guide(t, f){
+  const now = performance.now();
+  const d = dict();
+  if(!cameraIsLive()){
+    stableSince=0; setCaptureReady(false); readyScore.textContent=d.scoreNoCamera; readyScore.className='score lost'; setCommand('startCamera',false,true); updateMetrics(null,t,false); return;
+  }
+  if(aiToggle.checked && !modelReady && !modelFailed){
+    stableSince=0; setCaptureReady(false); readyScore.textContent=d.scoreLoading; readyScore.className='score'; setCommand('loading',false,true); updateMetrics(null,t,false); return;
+  }
+  if(!aiToggle.checked || modelFailed){
+    stableSince=0; setCaptureReady(false); readyScore.textContent=d.scoreTemplate; readyScore.className='score'; modeBadge.textContent=d.badgeTemplate; setCommand('manual',false,true); updateMetrics(null,t,false); return;
+  }
+  if(!f){
+    stableSince=0; setCaptureReady(false); readyScore.textContent=d.scoreNoFace; readyScore.className='score lost'; modeBadge.textContent=d.badgeSearching;
+    arrow(t.cx-t.w*.95,t.cy,t.cx-t.w*.55,t.cy,'rgba(255,209,102,.88)',d.arrowCenter);
+    arrow(t.cx+t.w*.95,t.cy,t.cx+t.w*.55,t.cy,'rgba(255,209,102,.88)',d.arrowCenter);
+    setCommand('noFace',false,true); updateMetrics(null,t,false); return;
+  }
+  modeBadge.textContent=d.badgeTracking;
+  const dx = f.noseTip.x - t.tipX; const dy = f.noseTip.y - t.tipY;
+  const tolX = Math.max(16, t.w*.13); const tolY = Math.max(16, t.h*.055);
+  const sizeTol = t.idealFaceH * 0.18;
+  const sizeErr = f.faceH - t.idealFaceH;
+  const rollTol = 5.8;
+  const yawTol = view === 'frontal' ? 0.25 : 0.42;
+  let key = 'hold'; let ok = true; let warn = false;
+  if(Math.abs(sizeErr) > sizeTol){ key = sizeErr > 0 ? 'farther' : 'closer'; ok = false; }
+  else if(Math.abs(f.roll) > rollTol){ key = f.roll > 0 ? 'levelLeft' : 'levelRight'; ok = false; }
+  else if(view === 'frontal' && Math.abs(f.yaw) > yawTol){ key = f.yaw > 0 ? 'turnRight' : 'turnLeft'; ok = false; }
+  else if(Math.abs(dx) > tolX || Math.abs(dy) > tolY){
+    ok = false;
+    if(Math.abs(dx) > Math.abs(dy)) key = dx > 0 ? 'left' : 'right';
+    else key = dy > 0 ? 'up' : 'down';
+  }
+  if(!ok){ stableSince = 0; }
+  else { if(!stableSince) stableSince = now; key = now-stableSince > 950 ? 'ready' : 'hold'; }
+  const ready = key === 'ready';
+  if(dx > tolX) arrow(f.noseTip.x,f.noseTip.y,f.noseTip.x-78,f.noseTip.y,'rgba(255,85,112,.96)',d.arrowLeft);
+  if(dx < -tolX) arrow(f.noseTip.x,f.noseTip.y,f.noseTip.x+78,f.noseTip.y,'rgba(255,85,112,.96)',d.arrowRight);
+  if(dy > tolY) arrow(f.noseTip.x,f.noseTip.y,f.noseTip.x,f.noseTip.y-78,'rgba(255,85,112,.96)',d.arrowUp);
+  if(dy < -tolY) arrow(f.noseTip.x,f.noseTip.y,f.noseTip.x,f.noseTip.y+78,'rgba(255,85,112,.96)',d.arrowDown);
+  line(f.noseTip.x,f.noseTip.y,t.tipX,t.tipY, ready ? 'rgba(45,242,138,.62)' : 'rgba(255,209,102,.55)',3,[5,7]);
+  const stablePct = stableSince ? Math.min(100,Math.round((now-stableSince)/950*100)) : 0;
+  readyScore.textContent = ready ? d.scoreReady : d.scoreAligning; readyScore.className = ready ? 'score ready' : 'score';
+  setCommand(key, ready, warn);
+  setCaptureReady(ready);
+  updateMetrics(f,t,ready,dx,dy,sizeErr,stablePct);
+}
+function updateMetrics(f,t,ready=false,dx=0,dy=0,sizeErr=0,stablePct=0){
+  if(!f){ mDetect.textContent='--'; mNose.textContent='--'; mRoll.textContent='--'; mSize.textContent='--'; mYaw.textContent='--'; mStable.textContent='--'; stableBar.style.width='0%'; return; }
+  mDetect.textContent = currentLang==='tr' ? 'Algılandı' : 'Detected'; mNose.textContent=`${Math.round(dx)} / ${Math.round(dy)} px`;
+  mRoll.textContent=`${f.roll.toFixed(1)}\u00b0`; mSize.textContent=`${sizeErr>0?'+':''}${Math.round(sizeErr)} px`;
+  mYaw.textContent=f.yaw.toFixed(2); mStable.textContent=ready?'100%':`${stablePct}%`; stableBar.style.width=(ready?100:stablePct)+'%';
+}
+function draw(){
+  fitCanvas(); clear(); const t = template(); drawTemplate(t); const f = featureSet(); drawLandmarks(f); guide(t,f); requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+async function capture(options={}){
+  if(!options.force && !alignmentReady){
+    setCommand(lastCommandKey || 'align', false, true);
+    setCaptureReady(false);
+    return false;
+  }
+  const r = canvas.getBoundingClientRect(); if(!video.videoWidth){setCommand('startCamera',false,true); setCaptureReady(false); return false;}
+  const vw = video.videoWidth, vh = video.videoHeight; const targetRatio = r.width/r.height; const vRatio = vw/vh;
+  let sx=0,sy=0,sw=vw,sh=vh; if(vRatio>targetRatio){sw=vh*targetRatio;sx=(vw-sw)/2;}else{sh=vw/targetRatio;sy=(vh-sh)/2;}
+  // Keep the camera's own resolution (never below 2x screen size, never above 2400 px on the long side).
+  let outW = Math.max(sw, r.width*2), outH = Math.max(sh, r.height*2);
+  const capScale = Math.min(1, 2400 / Math.max(outW, outH)); outW = Math.round(outW*capScale); outH = Math.round(outH*capScale);
+  const raw = document.createElement('canvas'); raw.width = outW; raw.height = outH; const ro = raw.getContext('2d');
+  const out = document.createElement('canvas'); out.width = raw.width; out.height = raw.height; const o = out.getContext('2d');
+  ro.drawImage(video,sx,sy,sw,sh,0,0,raw.width,raw.height);
+  o.drawImage(raw,0,0,out.width,out.height); o.drawImage(canvas,0,0,out.width,out.height);
+  lastOriginalPhoto = raw.toDataURL('image/png');
+  lastPhoto = out.toDataURL('image/png');
+  preview.src = photoVariantSelect.value === 'original-capture' ? lastOriginalPhoto : lastPhoto;
+  preview.style.display='block';
+  setCommand('captured',true,false);
+  flashShutter();
+  stableSince = 0;
+  alignmentReady = false;
+  flashCapturedButton();
+  if(autoSaveToggle.checked) await saveCurrentPhoto();
+  return true;
+}
+async function downloadPhoto(){
+  if(!lastPhoto && !lastOriginalPhoto){const ok = await capture(); if(!ok) return;}
+  const p = currentPatient();
+  const dataUrl = photoVariantSelect.value === 'original-capture' && lastOriginalPhoto ? lastOriginalPhoto : lastPhoto;
+  const stamp = new Date().toISOString().replace(/[:.]/g,'-');
+  const filename = `${p.folder}_${phaseSelect.value}_${photoVariantSelect.value}_${view}_${stamp}.png`;
+  await downloadBlob(dataURLToBlob(dataUrl), filename);
+}
+captureBtn.addEventListener('click',()=>capture()); downloadBtn.addEventListener('click',downloadPhoto);
+commandBox.addEventListener('click',()=>{ if(alignmentReady) capture(); else if(lastCommandKey !== 'captured') alignmentBeep(lastCommandKey,false); });
+commandBox.addEventListener('keydown',(e)=>{ if((e.key === 'Enter' || e.key === ' ') && alignmentReady){ e.preventDefault(); capture(); } });
+
+refreshCaseUI();
+setCaptureReady(false);
+if(navigator.mediaDevices && (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || IS_IPAD)){ cameraSelect.value='environment'; }
+
+/* ===== iPad support: wake lock, rotation, persistent storage, language ===== */
+let wakeLock = null;
+async function requestWakeLock(){
+  try{
+    if('wakeLock' in navigator && !wakeLock){
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', ()=>{ wakeLock = null; });
+    }
+  }catch(e){ wakeLock = null; }
+}
+function releaseWakeLock(){
+  try{ if(wakeLock) wakeLock.release(); }catch(e){}
+  wakeLock = null;
+}
+// Any tap re-activates audio (needed after returning from background on iPad).
+document.addEventListener('pointerdown', ()=>{ try{ if(!audioCtx || audioCtx.state !== 'running') unlockAudio(); }catch(e){} }, {passive:true, capture:true});
+document.addEventListener('visibilitychange', ()=>{
+  if(document.visibilityState === 'visible'){
+    if(stream && stream.active) requestWakeLock();
+    // iPadOS can suspend the camera when the app goes to background; restart it on return.
+    if(stream && !cameraIsLive()) setTimeout(()=>{ if(!cameraIsLive()) startCamera(); }, 400);
+  }
+});
+function refitSoon(){ fitCanvas(); setTimeout(fitCanvas, 250); setTimeout(fitCanvas, 700); }
+window.addEventListener('orientationchange', refitSoon);
+if(window.visualViewport) window.visualViewport.addEventListener('resize', refitSoon);
+if(window.ResizeObserver) new ResizeObserver(()=>fitCanvas()).observe(stage);
+
+async function updateStorageInfo(){
+  const el = document.getElementById('storageInfo'); if(!el) return;
+  const tr = currentLang === 'tr';
+  try{
+    let persisted = false;
+    if(navigator.storage && navigator.storage.persisted) persisted = await navigator.storage.persisted();
+    if(!persisted && navigator.storage && navigator.storage.persist) persisted = await navigator.storage.persist();
+    let usage = '';
+    if(navigator.storage && navigator.storage.estimate){
+      const est = await navigator.storage.estimate();
+      const mb = v => (v/1048576).toFixed(0);
+      usage = tr ? `Kullanılan alan: ${mb(est.usage||0)} MB / ${mb(est.quota||0)} MB. ` : `Storage used: ${mb(est.usage||0)} MB of ${mb(est.quota||0)} MB. `;
+    }
+    const standalone = window.navigator.standalone === true || (window.matchMedia && matchMedia('(display-mode: standalone)').matches);
+    let note;
+    if(persisted || standalone) note = tr ? 'Fotoğraflar bu cihazda kalıcı olarak saklanıyor.' : 'Photos are stored persistently on this device.';
+    else note = tr ? 'Fotoğrafların silinmemesi için RITA\'yı Safari\'de Paylaş > Ana Ekrana Ekle ile ana ekrana ekleyin ve hasta klasörlerini düzenli dışa aktarın.'
+                   : 'To keep photos safe, add RITA to the Home Screen (Safari: Share > Add to Home Screen) and export patient folders regularly.';
+    el.textContent = usage + note;
+  }catch(e){ el.textContent = ''; }
+}
+
+// Interface is English only.
+languageSelect.value = 'en';
+applyLanguage('en');
+try{ localStorage.removeItem('rita_lang'); }catch(e){}
+updateStorageInfo();
+window.addEventListener('load',()=>{
+  if(window.FaceMesh){ setPill(modelState,'AI model available','warn'); }
+  else { modelFailed = true; setPill(modelState,'AI model unavailable','red'); }
+  refreshCameraList();
+});
+</script>
+</body>
+</html>
